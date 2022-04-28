@@ -1,50 +1,27 @@
-# Bonanza Exorsa
+# Next.js + Tailwind CSS Example
 
-## Table of Contents
+This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.0)](https://tailwindcss.com/blog/tailwindcss-v3) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
 
-- [Project Description](#project-description)
-- [Install and Build](#install-and-build)
-  - [Installing dependencies](#installing-dependencies)
-  - [Running the Frontend](#running-the-frontend)
-  - [Utility Scripts](#utility-scripts)
+## Preview
 
-## Project Description
+Preview the example live on [StackBlitz](http://stackblitz.com/):
 
-Frontend for Bonanza Exorsa. Bonanza is a ...
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
 
-## Install and Build
+## Deploy your own
 
-### Installing dependencies
+Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
 
-- For installing all dependencies -
-  ```
-  yarn
-  ```
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
 
-- For linking frontend to backend -
-** Note: Running `yarn link` in the backend before doing this is necessary if "hardhat-project" is not shown in your node_modules folder **
-  ```
-  yarn link "hardhat-project"
-  ```
+## How to use
 
-### Running the Frontend
+Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
 
-For running the frontend:
-```
-yarn dev
+```bash
+npx create-next-app --example with-tailwindcss with-tailwindcss-app
+# or
+yarn create next-app --example with-tailwindcss with-tailwindcss-app
 ```
 
-## Utility Scripts
-
-- For formatting the code using Prettier -
-```
-yarn format
-```
-
-- For linting with ESLint -
-```
-yarn lint
-```
-
-
-
+Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).

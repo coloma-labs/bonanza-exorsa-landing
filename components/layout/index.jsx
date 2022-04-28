@@ -5,18 +5,8 @@ import Navbar from "./navbar";
 function Layout({ children }) {
   return (
     <>
-      <Head>
-        <title>Bonanza</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <link
-          rel="shortcut icon"
-          type="image/jpg"
-          href="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-        />
-      </Head>
-
-      <Navbar withAccount />
-      {children}
+      <Navbar />
+      <div className="max-w-6xl mx-auto p-5">{children}</div>
       <Footer />
     </>
   );

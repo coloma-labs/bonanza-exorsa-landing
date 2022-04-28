@@ -1,21 +1,82 @@
 // Components
-import Layout from "../components/layout";
-import CtaButton from "../components/buttons/cta-btn";
-
-// Hooks
-import Link from "next/link";
+import Image from "next/image";
+import Script from "next/script";
+import { FaTwitter, FaDiscord } from "react-icons/fa";
+import { RiInstagramFill } from "react-icons/ri";
+import Manifesto from "../components/manifesto";
+import NavBtn from "../components/buttons/nav-btn";
+import SocialIconBtn from "../components/buttons/social-icon-btn";
+import Head from "next/head";
 
 const Home = () => {
   return (
-    <Layout>
-      <div className="flex h-64 flex-col align-center justify-center">
-        <div className="text-center">
-          <Link href="/mint">
-            <CtaButton>Go to Mint</CtaButton>
-          </Link>
+    <>
+      <Script
+        strategy="lazyOnload"
+        src={`https://www.googletagmanager.com/gtag/js?id=G-0DQTSRH3RD`}
+      />
+
+      <Script strategy="lazyOnload">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-0DQTSRH3RD', {
+            page_path: window.location.pathname,
+          });
+        `}
+      </Script>
+
+      <Head>
+        <title>Bonanza Exorsa</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta
+          name="keywords"
+          content="nft, opensea, nft meaning, nft art, nft crypto, non fungible token, opensea nft, nft token, nft crypto art, crypto nft, coinbase nft, nfts crypto, nft buy, nft for sale, buy nfts, nft opensea, crypto, cryptocurrency, ethereum, eth"
+        />
+      </Head>
+
+      <div id="home-page">
+        <div className="h-screen flex flex-col justify-center items-center overflow-hidden animate-fade-in">
+          <div className="flex gap-7 mb-5">
+            <SocialIconBtn
+              icon={FaDiscord}
+              link="Https://discord.gg/UxAXgguYt9"
+            />
+            <SocialIconBtn
+              icon={FaTwitter}
+              link="https://twitter.com/bonanzaexorsa"
+            />
+            <SocialIconBtn
+              icon={RiInstagramFill}
+              link="https://www.instagram.com/bonanzaexorsa"
+            />
+          </div>
+
+          <div>
+            <Image
+              src="/logos/bonanza-long.png"
+              alt="Bonanza"
+              height="80px"
+              width="350px"
+            />
+          </div>
+
+          <div>
+            <div className="flex gap-4 mt-3 text-[#1e2c44]">
+              <NavBtn home text="Gallery" disabled />
+              <NavBtn home text="Store" disabled />
+              <NavBtn home text="About" link="/about" />
+              <NavBtn home text="Journey" disabled />
+            </div>
+          </div>
+
+          <div className="my-5">
+            <Manifesto />
+          </div>
         </div>
       </div>
-    </Layout>
+    </>
   );
 };
 

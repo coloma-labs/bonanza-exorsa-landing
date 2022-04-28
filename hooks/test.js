@@ -13,7 +13,7 @@ const useTesting = () => {
     });
 
     try {
-      const accountToImpersonate = "0x70997970c51812dc3a010c7d01b50e0d17dc79c8"; // Change this address to one with an existing ETH balance
+      const accountToImpersonate = "0x73BCEb1Cd57C711feaC4224D062b0F6ff338501e"; // Change this address to one with an existing ETH balance
       await localProvider.send("hardhat_impersonateAccount", [
         accountToImpersonate,
       ]);

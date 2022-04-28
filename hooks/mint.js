@@ -1,8 +1,8 @@
 import { useState } from "react";
+import NFT from "../utils/EternalNFT.json";
 import axios from "axios";
 import { ethers } from "ethers";
-import Contract from "hardhat-project/deployments/localhost/EternalNFT.json";
-import generateProof from "hardhat-project/scripts/merkletree";
+import { nftContractAddress } from "../config";
 
 const useMint = () => {
   const [mintedNFT, setMintedNFT] = useState(null);
@@ -19,17 +19,12 @@ const useMint = () => {
         const provider = new ethers.providers.Web3Provider(ethereum);
         const signer = provider.getSigner();
         const nftContract = new ethers.Contract(
-          Contract.address,
-          Contract.abi,
+          nftContractAddress,
+          NFT.abi,
           signer
         );
-        const clientAddress = await signer.getAddress();
-        console.log("Generating merkle proof for address: ", clientAddress);
 
-        const _merkleProof = generateProof(clientAddress);
-        console.log("Merkle proof for address: ", _merkleProof);
-
-        let nftTx = await nftContract.createEternalNFT(_merkleProof);
+        let nftTx = await nftContract.createEternalNFT();
 
         console.log("Mining....", nftTx.hash);
         setMiningStatus(0);
@@ -64,8 +59,8 @@ const useMint = () => {
         const provider = new ethers.providers.Web3Provider(ethereum);
         const signer = provider.getSigner();
         const nftContract = new ethers.Contract(
-          Contract.address,
-          Contract.abi,
+          nftContractAddress,
+          NFT.abi,
           signer
         );
 

@@ -1,3 +1,79 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  background-color: #f3f5f4;
+  font-family: "Oswald", sans-serif;
+}
+
+#home-page {
+  background: url("../public/anime-city.gif") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#about-banner {
+  background: url("../public/about.gif") no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  filter: grayscale(70%);
+}
+
+/* Manifesto Button */
+.button-manifesto {
+  background-color: #b83804;
+  border: 0;
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 600;
+  outline: 0;
+  padding: 3px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-manifesto:before {
+  background-color: initial;
+  background-image: linear-gradient(#fff 5%, rgba(255, 255, 255, 0) 100%);
+  border-radius: 125px;
+  content: "";
+  height: 50%;
+  left: 4%;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  transition: all 0.3s;
+  width: 92%;
+}
+
+.button-manifesto:hover {
+  box-shadow: rgba(255, 255, 255, 0.2) 0 3px 15px inset,
+    rgba(0, 0, 0, 0.1) 0 3px 5px, rgba(0, 0, 0, 0.1) 0 10px 13px;
+  transform: scale(1.05);
+}
+
+/* Audio Player */
+.rhap_container {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+}
+
+.rhap_progress-section {
+  display: none;
+}
+
+/* About Page */

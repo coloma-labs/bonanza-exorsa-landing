@@ -1,89 +1,85 @@
-import WalletConnectProvider from "@walletconnect/web3-provider";
-import WalletLink from "walletlink";
-import { useCallback } from "react";
-import Web3Modal from "web3modal";
-import { providers } from "ethers";
-import { useAccountContext } from "../store/account";
+import { useState } from "react";
 
-const INFURA_ID = "460f40a260564ac4a4f4b3fffb032dad";
+const localhostChainId = `0x${Number(1337).toString(16)}`;
+const ethChainId = "0x1";
 
-export const providerOptions = {
-  walletconnect: {
-    package: WalletConnectProvider, // required
-    options: {
-      infuraId: INFURA_ID, // required
-    },
-  },
-  "custom-walletlink": {
-    display: {
-      logo: "https://play-lh.googleusercontent.com/PjoJoG27miSglVBXoXrxBSLveV6e3EeBPpNY55aiUUBM9Q1RCETKCOqdOkX2ZydqVf0",
-      name: "Coinbase",
-      description: "Connect to Coinbase Wallet (not Coinbase App)",
-    },
-    options: {
-      appName: "Coinbase", // Your app name
-      networkUrl: `https://mainnet.infura.io/v3/${INFURA_ID}`,
-      chainId: 1,
-    },
-    package: WalletLink,
-    connector: async (_, options) => {
-      console.log(options);
-      const { appName, networkUrl, chainId } = options;
-      const walletLink = new WalletLink({
-        appName,
-      });
-      const provider = walletLink.makeWeb3Provider(networkUrl, chainId);
-      await provider.enable();
-      return provider;
-    },
-  },
-};
+const useWallet = () => {
+  const [currentAccount, setCurrentAccount] = useState("");
 
-function useConnection() {
-  const { setAddress, setProvider, setChainId, setWeb3Provider, provider } =
-    useAccountContext();
+  const checkIfWalletIsConnected = async () => {
+    const { ethereum } = window;
 
-  let web3Modal;
-  if (typeof window !== "undefined") {
-    web3Modal = new Web3Modal({
-      network: "mainnet", // optional
-      cacheProvider: true,
-      providerOptions, // required
-    });
-  }
+    const accounts = await ethereum.request({ method: "eth_accounts" });
 
-  const connect = useCallback(async function () {
-    const provider = await web3Modal.connect();
-    const web3Provider = new providers.Web3Provider(provider);
-    const signer = web3Provider.getSigner();
-    const address = await signer.getAddress();
-    const network = await web3Provider.getNetwork();
+    if (accounts.length !== 0) {
+      console.log("Found authorized Account: ", accounts[0]);
+      setCurrentAccount(accounts[0]);
+    } else {
+      console.log("No authorized account found");
+    }
+  };
 
-    setProvider(provider);
-    setWeb3Provider(web3Provider);
-    setAddress(address);
-    setChainId(network.chainId);
-  }, []);
+  // TO-DO: fix this to connect to
+  const connectWallet = async () => {
+    try {
+      const { ethereum } = window;
 
-  const disconnect = useCallback(
-    async function () {
-      await web3Modal.clearCachedProvider();
-      if (provider?.disconnect && typeof provider.disconnect === "function") {
-        await provider.disconnect();
-        setProvider(null);
-        setWeb3Provider(null);
-        setAddress(null);
-        setChainId(null);
+      if (!ethereum) {
+        console.log("Metamask not detected");
+        alert(
+          "MetaMask is not installed. Please consider installing it: https://metamask.io/download.html"
+        );
+        return;
       }
-    },
-    [provider]
-  );
+
+      const chainId = await ethereum.request({ method: "eth_chainId" });
+      console.log("Connected to chain:" + chainId);
+      console.log("Connected to devchain:" + localhostChainId);
+      if (chainId !== localhostChainId && chainId !== "0x7a69") {
+        try {
+          // check if the chain to connect to is installed
+          await ethereum.request({
+            method: "wallet_switchEthereumChain",
+            params: [{ chainId: localhostChainId }], // chainId must be in hexadecimal numbers.
+          });
+        } catch (error) {
+          // This error code indicates that the chain has not been added to MetaMask
+          // if it is not, then install it into the user MetaMask
+          if (error.code === 4902) {
+            try {
+              await window.ethereum.request({
+                method: "wallet_addEthereumChain",
+                params: [
+                  {
+                    chainId: localhostChainId,
+                  },
+                ],
+              });
+            } catch (addError) {
+              console.error(addError);
+            }
+          }
+        }
+        return;
+      }
+
+      const accounts = await ethereum.request({
+        method: "eth_requestAccounts",
+      });
+
+      console.log("Found account", accounts[0]);
+      setCurrentAccount(accounts[0]);
+    } catch (error) {
+      console.log("Error connecting to metamask", error);
+    }
+  };
 
   return {
-    connect,
-    disconnect,
-    web3Modal,
+    checkIfWalletIsConnected,
+    currentAccount,
+    setCurrentAccount,
+    connectWallet,
   };
-}
+};
 
-export default useConnection;
+export default useWallet;
