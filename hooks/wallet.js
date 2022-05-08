@@ -2,7 +2,7 @@ import WalletConnectProvider from "@walletconnect/web3-provider";
 import WalletLink from "walletlink";
 import { useCallback } from "react";
 import Web3Modal from "web3modal";
-import { providers } from "ethers";
+import { ethers, providers } from "ethers";
 import { useAccountContext } from "../store/account";
 
 const INFURA_ID = "460f40a260564ac4a4f4b3fffb032dad";
@@ -58,6 +58,13 @@ function useConnection() {
     const signer = web3Provider.getSigner();
     const address = await signer.getAddress();
     const network = await web3Provider.getNetwork();
+
+    if(network.chainId !== "31337"){ // change this chainId upon launch
+      await window.ethereum.request({
+        method: 'wallet_switchEthereumChain',
+        params: [{ chainId: ethers.utils.hexlify(31337) }]
+      })
+    }
 
     setProvider(provider);
     setWeb3Provider(web3Provider);

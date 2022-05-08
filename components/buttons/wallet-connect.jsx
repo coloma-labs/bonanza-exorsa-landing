@@ -53,18 +53,13 @@ function WalletConnect() {
   return (
     <>
       {web3Provider ? (
-        <>
+        <CtaButton onClick={provider?.disconnect && disconnect}>
           {truncateBetween(address)}
-          {provider?.disconnect && (
-            <div>
-              <CtaButton onClick={disconnect}>Disconnect</CtaButton>
-            </div>
-          )}
-        </>
+        </CtaButton>
       ) : (
-        <>
-          <CtaButton onClick={connect}>Connect Wallet</CtaButton>
-        </>
+        <CtaButton onClick={connect}>
+          Connect Wallet
+        </CtaButton>
       )}
     </>
   );
