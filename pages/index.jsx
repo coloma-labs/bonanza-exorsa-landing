@@ -45,7 +45,7 @@ const Home = () => {
         <video autoPlay muted loop id="bgVideo">
           <source src={backgroundVideo} type="video/mp4" />
         </video>
-        <div className="h-screen flex flex-col justify-center items-center overflow-hidden animate-fade-in">
+        <div className="relative h-screen flex flex-col justify-center items-center overflow-hidden animate-fade-in">
           {/* Socials */}
           <div className="flex gap-7 mb-5">
             <SocialIconBtn
