@@ -1,12 +1,15 @@
 // Components
 import Image from "next/image";
 import Script from "next/script";
+import Head from "next/head";
+
 import { FaTwitter, FaDiscord } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
+
 import Manifesto from "../components/manifesto";
 import NavBtn from "../components/buttons/nav-btn";
 import SocialIconBtn from "../components/buttons/social-icon-btn";
-import Head from "next/head";
+import backgroundVideo from '../public/background-animation.mp4';
 
 const Home = () => {
   return (
@@ -37,7 +40,13 @@ const Home = () => {
       </Head>
 
       <div id="home-page">
+        
+        {/* Background Video */}
+        <video autoPlay muted loop id="bgVideo">
+          <source src={backgroundVideo} type="video/mp4" />
+        </video>
         <div className="h-screen flex flex-col justify-center items-center overflow-hidden animate-fade-in">
+          {/* Socials */}
           <div className="flex gap-7 mb-5">
             <SocialIconBtn
               icon={FaDiscord}
@@ -53,6 +62,7 @@ const Home = () => {
             />
           </div>
 
+          {/* Bonanza logo */}
           <div>
             <Image
               src="/logos/bonanza-long.png"

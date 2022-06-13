@@ -8,11 +8,20 @@ body {
 }
 
 #home-page {
-  background: url("../public/anime-city.gif") no-repeat center center fixed;
+  /* background: url("../public/anime-city.gif") no-repeat center center fixed; */
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+/* Style the video: 100% width and height to cover the entire window */
+#bgVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 #about-banner {
