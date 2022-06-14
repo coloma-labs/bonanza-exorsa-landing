@@ -47,7 +47,7 @@ function useConnection() {
   if (typeof window !== "undefined") {
     web3Modal = new Web3Modal({
       network: "mainnet", // optional
-      cacheProvider: true,
+      cacheProvider: false,
       providerOptions, // required
     });
   }
@@ -75,13 +75,14 @@ function useConnection() {
   const disconnect = useCallback(
     async function () {
       await web3Modal.clearCachedProvider();
+      // DO WE DELETE THIS CUZ THERE IS NO DISCONNECT????
       if (provider?.disconnect && typeof provider.disconnect === "function") {
         await provider.disconnect();
-        setProvider(null);
-        setWeb3Provider(null);
-        setAddress(null);
-        setChainId(null);
       }
+      setProvider(null);
+      setWeb3Provider(null);
+      setAddress(null);
+      setChainId(null);
     },
     [provider]
   );

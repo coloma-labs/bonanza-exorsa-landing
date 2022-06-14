@@ -49,11 +49,11 @@ function WalletConnect() {
       };
     }
   }, [provider, disconnect]);
-
+  
   return (
     <>
       {web3Provider ? (
-        <CtaButton onClick={provider?.disconnect && disconnect}>
+        <CtaButton onClick={disconnect}>
           {truncateBetween(address)}
         </CtaButton>
       ) : (
