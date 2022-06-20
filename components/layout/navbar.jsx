@@ -35,40 +35,7 @@ export default function Navbar() {
                 )}
               </div>
             </Link>
-            {width > 800 && (
-              <div className="flex gap-4 ml-5">
-                <SocialIconBtn
-                  icon={FaDiscord}
-                  link="Https://discord.gg/UxAXgguYt9"
-                />
-                <SocialIconBtn
-                  icon={FaTwitter}
-                  link="https://twitter.com/bonanzaexorsa"
-                />
-                <SocialIconBtn
-                  icon={RiInstagramFill}
-                  link="https://www.instagram.com/bonanzaexorsa"
-                />
-              </div>
-            )}
           </div>
-
-          {width < 800 && (
-            <div className="flex gap-4 ml-5">
-              <SocialIconBtn
-                icon={FaDiscord}
-                link="Https://discord.gg/UxAXgguYt9"
-              />
-              <SocialIconBtn
-                icon={FaTwitter}
-                link="https://twitter.com/bonanzaexorsa"
-              />
-              <SocialIconBtn
-                icon={RiInstagramFill}
-                link="https://www.instagram.com/bonanzaexorsa"
-              />
-            </div>
-          )}
 
           <div className="flex items-center justify-end lg:w-0">
             {width > 800 ? (
