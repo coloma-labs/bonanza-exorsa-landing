@@ -7,7 +7,7 @@ import { FaTwitter, FaDiscord } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
 
 import Manifesto from "../components/manifesto";
-import NavBtn from "../components/buttons/nav-btn";
+import NavBar from "../components/layout/navbar";
 import SocialIconBtn from "../components/buttons/social-icon-btn";
 import backgroundVideo from '../public/background-animation.mp4';
 
@@ -45,6 +45,9 @@ const Home = () => {
         <video autoPlay muted loop id="bgVideo">
           <source src={backgroundVideo} type="video/mp4" />
         </video>
+
+        <NavBar />
+
         <div className="relative h-screen flex flex-col justify-center items-center overflow-hidden animate-fade-in">
           {/* Socials */}
           <div className="flex gap-7 mb-5">
@@ -70,15 +73,6 @@ const Home = () => {
               height="80px"
               width="350px"
             />
-          </div>
-
-          <div>
-            <div className="flex gap-4 mt-3 text-[#1e2c44]">
-              <NavBtn home text="Gallery" disabled />
-              <NavBtn home text="Store" disabled />
-              <NavBtn home text="About" link="/about" />
-              <NavBtn home text="Journey" disabled />
-            </div>
           </div>
 
           <div className="my-5">
