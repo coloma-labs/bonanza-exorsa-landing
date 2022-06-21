@@ -53,7 +53,7 @@ const Home = () => {
           <source src={backgroundVideo} type="video/mp4" />
         </video>
 
-        <div className="h-screen" />
+        <div className="h-screen mb-10" />
 
 
         {/* <div className="relative h-screen flex flex-col justify-center items-center overflow-hidden animate-fade-in">
