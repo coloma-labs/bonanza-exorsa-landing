@@ -16,10 +16,10 @@ function Footer() {
               <div className="flex items-center">
                 <a className="w-12 md:w-20" href="/" >
                     <Image
-                      src="/logos/bonanza-long.png"
+                      src="/logos/bonanza-logo-white.png"
                       alt="Bonanza"
-                      height="80px"
-                      width="350px"
+                      height="72px"
+                      width="227px"
                     />
                 </a>
               </div>
