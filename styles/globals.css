@@ -15,15 +15,6 @@ body {
   background-size: cover;
 }
 
-/* Style the video: 100% width and height to cover the entire window */
-#bgVideo {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-}
-
 #about-banner {
   background: url("../public/about.gif") no-repeat center;
   -webkit-background-size: cover;
@@ -85,4 +76,11 @@ body {
   display: none;
 }
 
-/* About Page */
+/* remove scrollbar */
+
+*{
+  -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+  display: none;
+}

@@ -13,8 +13,8 @@ export default function Navbar() {
 
   return (
     <nav className="relative bg-transparent">
-      <div className="max-w-7xl mx-auto pl-4 pr-5">
-        <div className="flex justify-between items-center py-6 justify-start space-x-10">
+      <div className="max-w-[1440px] mx-auto pl-4 pr-5">
+        <div className="flex justify-between items-center py-6 justify-start">
           <div className="flex justify-start items-center lg:w-0 lg:flex-1">
             <Link href="/">
               <div className="cursor-pointer">
@@ -84,7 +84,7 @@ export default function Navbar() {
                       <ul className="text-xl cursor-pointer">
                         <Link href="/">
                           <li className="py-1 transition duration-200 hover:text-themeLightOrange">
-                            Home
+                            Home``
                           </li>
                         </Link>
                         <li className="py-1 opacity-[0.6]">Gallery</li>

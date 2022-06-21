@@ -8,7 +8,7 @@ import { RiInstagramFill } from "react-icons/ri";
 
 import Manifesto from "../components/manifesto";
 import NavBar from "../components/layout/navbar";
-import SocialIconBtn from "../components/buttons/social-icon-btn";
+import Footer from "../components/layout/footer";
 import backgroundVideo from '../public/background-animation.mp4';
 
 const Home = () => {
@@ -41,31 +41,23 @@ const Home = () => {
 
       <div id="home-page">
         
+        <NavBar />
+        
         {/* Background Video */}
-        <video autoPlay muted loop id="bgVideo">
+        <video className="w-full absolute -top-10 left-0 -z-10"
+          autoPlay
+          muted
+          loop
+          id="bgVideo"
+          >
           <source src={backgroundVideo} type="video/mp4" />
         </video>
 
-        <NavBar />
+        <div className="h-screen" />
 
-        <div className="relative h-screen flex flex-col justify-center items-center overflow-hidden animate-fade-in">
-          {/* Socials */}
-          <div className="flex gap-7 mb-5">
-            <SocialIconBtn
-              icon={FaDiscord}
-              link="Https://discord.gg/UxAXgguYt9"
-            />
-            <SocialIconBtn
-              icon={FaTwitter}
-              link="https://twitter.com/bonanzaexorsa"
-            />
-            <SocialIconBtn
-              icon={RiInstagramFill}
-              link="https://www.instagram.com/bonanzaexorsa"
-            />
-          </div>
 
-          {/* Bonanza logo */}
+        {/* <div className="relative h-screen flex flex-col justify-center items-center overflow-hidden animate-fade-in">
+
           <div>
             <Image
               src="/logos/bonanza-long.png"
@@ -78,7 +70,10 @@ const Home = () => {
           <div className="my-5">
             <Manifesto />
           </div>
-        </div>
+        </div> */}
+
+        <Footer />
+
       </div>
     </>
   );
