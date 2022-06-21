@@ -13,16 +13,16 @@ function Footer() {
             <div className="md:flex">
               <div className="w-full md:w-1/3">
                 <div className="flex items-center">
-                  <a className="w-12 md:w-20" href="/" >
+                  <a href="/" >
                       <Image
                         src="/logos/white/bonanza-1.png"
                         alt="Bonanza"
-                        height="80px"
-                        width="240px"
+                        height="40px"
+                        width="120px"
                       />
                   </a>
                 </div>
-                <div className="mt-8 mb-2 text-md lg:text-lg">Connect with us</div>
+                <div className="mb-2 text-md lg:text-lg">Connect with us</div>
                 {/* Socials */}
                 <div className="flex gap-7 mb-5">
                   <SocialIconBtn
@@ -40,7 +40,7 @@ function Footer() {
                 </div>
               </div>
               <div className="md:w-2/3 md:flex md:justify-end">
-                <div className="mt-8 text-sm md:flex md:mt-0">
+                <div className="mt-8 text-lg md:flex md:mt-0">
                   <div className="flex-1">
                     <div className="footer-menu"><a href="/">Home</a></div>
                     <div className="footer-menu"><a href="/">Gallery</a></div>
