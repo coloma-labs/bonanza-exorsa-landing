@@ -6,7 +6,7 @@ function Layout({ children }) {
   return (
     <>
       <Navbar />
-      <div className="max-w-6xl mx-auto p-5">{children}</div>
+      <div className="max-w-6xl mx-auto p-5 mb-10 lg:mb-20">{children}</div>
       <Footer />
     </>
   );

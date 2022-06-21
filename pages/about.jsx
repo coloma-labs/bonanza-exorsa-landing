@@ -55,7 +55,7 @@ const About = () => {
             </h1>
           </div>
 
-          <div className="mt-20 animate-[fade-in-slow_7s_ease] text-center">
+          <div className="mt-20 animate-[fade-in-slow_7s_ease] text-center mb-20">
             <span>
               Symbolizing the bridge between both the physical and virtual
               worlds.

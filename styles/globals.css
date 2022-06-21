@@ -15,15 +15,6 @@ body {
   background-size: cover;
 }
 
-/* Style the video: 100% width and height to cover the entire window */
-#bgVideo {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-}
-
 #about-banner {
   background: url("../public/about.gif") no-repeat center;
   -webkit-background-size: cover;
@@ -33,45 +24,38 @@ body {
   filter: grayscale(70%);
 }
 
+#bgVideo {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
 /* Manifesto Button */
 .button-manifesto {
-  background-color: #b83804;
-  border: 0;
-  border-radius: 50%;
-  color: #fff;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 18px;
-  font-weight: 600;
-  outline: 0;
-  padding: 3px;
+}
+
+section {
+  @apply max-w-[1440px] mx-auto md:px-20 py-10;
+}
+
+.section-title {
+  @apply uppercase leading-tight;
+  @apply text-4xl md:text-6xl;
+  @apply mb-8;
+}
+
+.section-description {
+  @apply leading-relaxed;
+  @apply my-4;
+}
+
+.manifesto-wrapper {
+  height: calc(100vh - 10vh);
   position: relative;
-  text-align: center;
-  text-decoration: none;
-  transition: all 0.3s;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-}
-
-.button-manifesto:before {
-  background-color: initial;
-  background-image: linear-gradient(#fff 5%, rgba(255, 255, 255, 0) 100%);
-  border-radius: 125px;
-  content: "";
-  height: 50%;
-  left: 4%;
-  opacity: 0.5;
-  position: absolute;
-  top: 0;
-  transition: all 0.3s;
-  width: 92%;
-}
-
-.button-manifesto:hover {
-  box-shadow: rgba(255, 255, 255, 0.2) 0 3px 15px inset,
-    rgba(0, 0, 0, 0.1) 0 3px 5px, rgba(0, 0, 0, 0.1) 0 10px 13px;
-  transform: scale(1.05);
+  top: 2px;
 }
 
 /* Audio Player */
@@ -85,4 +69,19 @@ body {
   display: none;
 }
 
-/* About Page */
+/* remove scrollbar */
+
+* {
+  -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+.footer-menu {
+  transition: 0.2s;
+}
+
+.footer-menu:hover {
+  transform: scale(1.05);
+}

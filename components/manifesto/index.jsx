@@ -1,29 +1,37 @@
 import Image from "next/image";
-import { useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
+import { useWindowSize } from "../../hooks/window";
 
-function Manifesto() {
-  const [isOpen, setIsOpen] = useState(false);
+function Manifesto({ isOpen, setIsOpen, isScrolled }) {
+  const { width } = useWindowSize();
 
   return (
     <>
-      <button
-        className="button-manifesto"
-        // className="bg-[#ff8c31] text-white rounded-full border-[5px] border-[#b73e02] transition duration-500 ease-in-out  hover:-translate-y-1 hover:shadow-[0px_0px_10px_2px_rgba(0,0,0,0.4)] hover:scale-[110%]"
-        onClick={() => setIsOpen(true)}
-      >
-        <div className="pointer p-[2px] transition duration-500 ease-in-out hover:scale-[180%]">
-          <Image src="/book.svg" height={40} width={46} />
+      <button className="button-manifesto" onClick={() => setIsOpen(true)}>
+        <div
+          className={`pointer p-[2px] transition duration-500 ease-in-out hover:scale-[120%] grayscale ${
+            isScrolled ? "opacity-0" : ""
+          }`}
+        >
+          <Image
+            src="/book.svg"
+            height={width > 900 ? 110 : 90}
+            width={width > 900 ? 140 : 100}
+          />
         </div>
       </button>
 
       <div
-        className={`bg-[#f3f5f4] flex justify-center overflow-x-hidden transition-all duration-500 ease-in-out ${
-          isOpen
-            ? "opacity-100  h-screen w-screen absolute left-0 top-0"
-            : "opacity-0 absolute"
-        }`}
+        className={`bg-[#f3f5f4] flex justify-center overflow-x-hidden transition-all duration-500 ease-in-out
+          ${
+            isOpen
+              ? "opacity-100 h-screen w-screen absolute left-0 top-0"
+              : "opacity-0 absolute"
+          }
+          ${width > 1000 ? "items-center" : ""}
+        `}
         onClick={() => setIsOpen(false)}
+        id={`manifesto-${isOpen ? "open" : "closed"}`}
       >
         <div
           className={`px-[2rem] md:px-[5rem] lg:px-[10rem] max-w-7xl py-[2rem] h-fit ${
