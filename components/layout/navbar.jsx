@@ -6,6 +6,7 @@ import { RiInstagramFill } from "react-icons/ri";
 import { useWindowSize } from "../../hooks/window";
 import NavBtn from "../buttons/nav-btn";
 import SocialIconBtn from "../buttons/social-icon-btn";
+import { TextLoop } from "react-text-loop-next";
 
 export default function Navbar() {
   const { width } = useWindowSize();
@@ -19,12 +20,38 @@ export default function Navbar() {
             <Link href="/">
               <div className="cursor-pointer">
                 {width > 800 ? (
-                  <Image
-                    src="/logos/bonanza-long.png"
-                    alt="Bonanza"
-                    height="40px"
-                    width="175px"
-                  />
+                  <TextLoop delay={2000}>
+                    <Image
+                      src="/logos/bonanza-logo-white.png"
+                      alt="Bonanza"
+                      height="72px"
+                      width="227px"
+                    />
+                    <Image
+                      src="/logos/bonanza-logo-white-1.png"
+                      alt="Bonanza"
+                      height="45px"
+                      width="208px"
+                    />
+                    <Image
+                      src="/logos/bonanza-logo-white-2.png"
+                      alt="Bonanza"
+                      height="58px"
+                      width="169px"
+                    />
+                    <Image
+                      src="/logos/bonanza-logo-white-3.png"
+                      alt="Bonanza"
+                      height="67px"
+                      width="126px"
+                    />
+                    <Image
+                      src="/logos/bonanza-logo-white-4.png"
+                      alt="Bonanza"
+                      height="45px"
+                      width="106px"
+                    />
+                  </TextLoop>
                 ) : (
                   <Image
                     src="/logos/mobile.png"
