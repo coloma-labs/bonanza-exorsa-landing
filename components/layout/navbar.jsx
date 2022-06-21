@@ -7,7 +7,7 @@ import { useWindowSize } from "../../hooks/window";
 import NavBtn from "../buttons/nav-btn";
 import SocialIconBtn from "../buttons/social-icon-btn";
 import { TextLoop } from "react-text-loop-next";
-import { useRouter } from 'next/router';
+import { useRouter } from "next/router";
 
 export default function Navbar() {
   const router = useRouter();

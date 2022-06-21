@@ -43,7 +43,7 @@ section {
 
 .section-title {
   @apply uppercase leading-tight;
-	@apply text-4xl md:text-6xl;
+  @apply text-4xl md:text-6xl;
   @apply mb-8;
 }
 
@@ -54,7 +54,7 @@ section {
 
 .manifesto-wrapper {
   height: calc(100vh - 10vh);
-  position:relative;
+  position: relative;
   top: 2px;
 }
 
@@ -71,7 +71,7 @@ section {
 
 /* remove scrollbar */
 
-*{
+* {
   -ms-overflow-style: none;
 }
 ::-webkit-scrollbar {

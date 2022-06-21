@@ -7,20 +7,26 @@ function Manifesto({ isOpen, setIsOpen, isScrolled }) {
 
   return (
     <>
-      <button
-        className="button-manifesto"
-        onClick={() => setIsOpen(true)}
-      >
-        <div className={`pointer p-[2px] transition duration-500 ease-in-out hover:scale-[120%] grayscale ${isScrolled ? "opacity-0" : ""}`}>
-          <Image src="/book.svg" height={width > 900 ? 110 : 90} width={width > 900 ? 140 : 100} />
+      <button className="button-manifesto" onClick={() => setIsOpen(true)}>
+        <div
+          className={`pointer p-[2px] transition duration-500 ease-in-out hover:scale-[120%] grayscale ${
+            isScrolled ? "opacity-0" : ""
+          }`}
+        >
+          <Image
+            src="/book.svg"
+            height={width > 900 ? 110 : 90}
+            width={width > 900 ? 140 : 100}
+          />
         </div>
       </button>
 
       <div
         className={`bg-[#f3f5f4] flex justify-center overflow-x-hidden transition-all duration-500 ease-in-out
-          ${isOpen
-            ? "opacity-100 h-screen w-screen absolute left-0 top-0"
-            : "opacity-0 absolute"
+          ${
+            isOpen
+              ? "opacity-100 h-screen w-screen absolute left-0 top-0"
+              : "opacity-0 absolute"
           }
           ${width > 1000 ? "items-center" : ""}
         `}
