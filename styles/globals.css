@@ -65,6 +65,21 @@ body {
   transform: scale(1.05);
 }
 
+section {
+  @apply max-w-[1440px] mx-auto md:px-20 py-10;
+}
+
+.section-title {
+  @apply uppercase leading-tight;
+	@apply text-4xl md:text-6xl;
+  @apply mb-8;
+}
+
+.section-description {
+  @apply leading-relaxed;
+  @apply my-4;
+}
+
 /* Audio Player */
 .rhap_container {
   position: absolute;
