@@ -6,7 +6,7 @@ import SocialIconBtn from "../buttons/social-icon-btn";
 
 function Footer() {
   return (
-    <div className="w-full bg-slate-300 py-4">
+    <div className="w-full bg-slate-300 py-5 lg:py-10">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 z-[10]">
         <div className="footer">
           <div className="content md:px-20">
@@ -15,14 +15,14 @@ function Footer() {
                 <div className="flex items-center">
                   <a className="w-12 md:w-20" href="/" >
                       <Image
-                        src="/logos/bonanza-logo-white.png"
+                        src="/logos/white/bonanza-1.png"
                         alt="Bonanza"
-                        height="72px"
-                        width="227px"
+                        height="80px"
+                        width="240px"
                       />
                   </a>
                 </div>
-                <div className="mt-8 text-2xs md:text-sm">Connect with us</div>
+                <div className="mt-8 mb-2 text-md lg:text-lg">Connect with us</div>
                 {/* Socials */}
                 <div className="flex gap-7 mb-5">
                   <SocialIconBtn

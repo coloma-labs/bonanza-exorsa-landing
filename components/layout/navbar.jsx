@@ -21,36 +21,14 @@ export default function Navbar() {
               <div className="cursor-pointer">
                 {width > 800 ? (
                   <TextLoop delay={2000}>
-                    <Image
-                      src="/logos/bonanza-logo-white.png"
-                      alt="Bonanza"
-                      height="72px"
-                      width="227px"
-                    />
-                    <Image
-                      src="/logos/bonanza-logo-white-1.png"
-                      alt="Bonanza"
-                      height="45px"
-                      width="208px"
-                    />
-                    <Image
-                      src="/logos/bonanza-logo-white-2.png"
-                      alt="Bonanza"
-                      height="58px"
-                      width="169px"
-                    />
-                    <Image
-                      src="/logos/bonanza-logo-white-3.png"
-                      alt="Bonanza"
-                      height="67px"
-                      width="126px"
-                    />
-                    <Image
-                      src="/logos/bonanza-logo-white-4.png"
-                      alt="Bonanza"
-                      height="45px"
-                      width="106px"
-                    />
+                    {[1, 2, 3, 4, 5].map((_el, i) => (
+                      <Image
+                        src={`/logos/white/bonanza-${i + 1}.png`}
+                        alt="Bonanza"
+                        height="60px"
+                        width="200px"
+                      />
+                    ))}
                   </TextLoop>
                 ) : (
                   <Image

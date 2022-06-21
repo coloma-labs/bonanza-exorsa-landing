@@ -55,23 +55,6 @@ const Home = () => {
 
         <div className="h-screen mb-10" />
 
-
-        {/* <div className="relative h-screen flex flex-col justify-center items-center overflow-hidden animate-fade-in">
-
-          <div>
-            <Image
-              src="/logos/bonanza-long.png"
-              alt="Bonanza"
-              height="80px"
-              width="350px"
-            />
-          </div>
-
-          <div className="my-5">
-            <Manifesto />
-          </div>
-        </div> */}
-
         <section>
           <div className="section-title">
             a metaphysical brand.
@@ -111,9 +94,10 @@ const Home = () => {
           possibilities.  
           </div>
         </section>
-
-        <Footer />
-
+        
+        <div className="mt-5 lg:mt-10">
+          <Footer />
+        </div>
       </div>
     </>
   );
