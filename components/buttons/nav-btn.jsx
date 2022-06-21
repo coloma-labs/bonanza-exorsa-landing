@@ -24,14 +24,14 @@ function NavBtn({ disabled, text, link, home }) {
     if (!disabled) {
       return (
         <Link href={link || "/#"}>
-          <div className="cursor-pointer text-themeDarkOrange hover:text-themeLightOrange duration-200">
+          <div className="cursor-pointer text-white hover:text-themeLightOrange duration-200">
             <span className="text-2xl">{text}</span>
           </div>
         </Link>
       );
     } else {
       return (
-        <div className="cursor-not-allowed text-[#af6e54]">
+        <div className="cursor-not-allowed text-gray-500">
           <span className="text-2xl">{text}</span>
         </div>
       );
