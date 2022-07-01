@@ -49,16 +49,22 @@ function Footer() {
                         <a href="/">Home</a>
                       </div>
                       <div className="footer-menu">
-                        <a href="/">Gallery</a>
+                        <a href="/about">About</a>
                       </div>
                       <div className="footer-menu">
                         <a href="/">Store</a>
                       </div>
                       <div className="footer-menu">
-                        <a href="/">About</a>
+                        <a href="/">Manga</a>
                       </div>
                       <div className="footer-menu">
-                        <a href="/">Journey</a>
+                        <a href="/">Plans</a>
+                      </div>
+                      <div className="footer-menu">
+                        <a href="/">Stories</a>
+                      </div>
+                      <div className="footer-menu">
+                        <a href="/">Docs</a>
                       </div>
                     </div>
                   </div>
