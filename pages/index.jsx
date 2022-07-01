@@ -7,6 +7,7 @@ import Manifesto from "../components/manifesto";
 import NavBar from "../components/layout/navbar";
 import Footer from "../components/layout/footer";
 import backgroundVideo from "../public/background-animation.mp4";
+import Image from "next/image";
 // Externals
 import { FaTwitter, FaDiscord } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
@@ -79,7 +80,7 @@ const Home = () => {
           <source src={backgroundVideo} type="video/mp4" />
         </video>
 
-        <div
+        {/* <div
           className={`flex justify-center items-center manifesto-wrapper transition duration-500 
           ${scrollY > 500 ? "bg-[#f3f5f4]" : "bg-transparent"}
           ${manifestoIsOpen ? "!absolute w-full top-[-2px]" : ""}
@@ -90,9 +91,21 @@ const Home = () => {
             isOpen={manifestoIsOpen}
             isScrolled={scrollY > 500}
           />
+        </div> */}
+
+        <div
+          className={'absolute bottom-0 left-0 h-screen w-full flex flex-col justify-center items-center'}
+        >
+          <div className="pb-44" />
+          <Image
+            src="/logos/bonanza-long.png"
+            alt="Bonanza"
+            height="90px"
+            width="250px"
+          />
         </div>
 
-        <div className="bg-[#f3f5f4]">
+        {/* <div className="bg-[#f3f5f4]">
           <section className="bg-[#f3f5f4] py-20 lg:py-50 2xl:py-[10rem] px-5">
             <div className="max-w-[600px]">
               <div className="section-title">a metaphysical brand.</div>
@@ -148,9 +161,9 @@ const Home = () => {
               </div>
             </div>
           </section>
-        </div>
+        </div> */}
 
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </>
   );

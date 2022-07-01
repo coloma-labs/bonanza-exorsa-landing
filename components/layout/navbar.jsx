@@ -19,35 +19,38 @@ export default function Navbar() {
       <div className="max-w-[1440px] mx-auto pl-4 pr-5">
         <div className="flex justify-between items-center py-6 justify-start">
           <div className="flex justify-start items-center lg:w-0 lg:flex-1">
-            <Link href="/">
-              <div className="cursor-pointer">
-                {width > 800 ? (
-                  <Image
-                    src="/logos/bonanza-long.png"
-                    alt="Bonanza"
-                    height="90px"
-                    width="250px"
-                  />
-                ) : (
-                  <Image
-                    src="/logos/mobile.png"
-                    alt="Bonanza"
-                    height="50px"
-                    width="46px"
-                  />
-                )}
-              </div>
-            </Link>
+            {router.pathname !== '/' ? (
+              <Link href="/">
+                <div className="cursor-pointer">
+                  {width > 800 ? (
+                    <Image
+                      src="/logos/bonanza-long.png"
+                      alt="Bonanza"
+                      height="90px"
+                      width="250px"
+                    />
+                  ) : (
+                    <Image
+                      src="/logos/mobile.png"
+                      alt="Bonanza"
+                      height="50px"
+                      width="46px"
+                    />
+                  )}
+                </div>
+              </Link>
+            ) : (null)}
           </div>
 
           <div className="flex items-center justify-end lg:w-0">
             {width > 800 ? (
               <div className="flex gap-5 xl:gap-8">
-                <NavBtn text="Home" link="/" />
-                <NavBtn text="Gallery" />
-                <NavBtn text="Store" />
                 <NavBtn text="About" link="/about" />
-                <NavBtn text="Journey" />
+                <NavBtn text="Store" />
+                <NavBtn text="Manga" />
+                <NavBtn text="Plans" />
+                <NavBtn text="Stories" />
+                <NavBtn text="Docs" />
               </div>
             ) : (
               <div onBlur={() => setIsOpen(false)}>
