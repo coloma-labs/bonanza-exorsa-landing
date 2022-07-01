@@ -31,10 +31,10 @@ export default function Navbar() {
                     />
                   ) : (
                     <Image
-                      src="/logos/mobile.png"
+                      src="/logos/bonanza-long.png"
                       alt="Bonanza"
-                      height="50px"
-                      width="46px"
+                      height="45px"
+                      width="115px"
                     />
                   )}
                 </div>
