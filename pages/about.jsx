@@ -42,26 +42,61 @@ const About = () => {
           </h1>
         </div>
 
-        <div className="px-5 text-lg md:text-xl">
-          <div className="text-center font-italic animate-[fade-in-slow_5s_ease]">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold animate-fade-in text-center">
-              Bonanza is{" "}
-              <TextLoop delay={2000}>
-                <span>a story</span>
-                <span>a brand</span>
-                <span>inspiration</span>
-              </TextLoop>
-              .
-            </h1>
+        <section className="bg-black py-20 lg:py-50 2xl:py-[10rem] px-5">
+          <div className="max-w-[600px]">
+            <div className="section-title">a metaphysical brand.</div>
+            <div className="section-content">
+              Bonanza, is the world’s first ever Metaphysical Brand. Our brand
+              symbolizes one’s journey towards the investigation of reality,
+              self-worth, identity, and possibility.
+            </div>
           </div>
 
-          <div className="mt-20 animate-[fade-in-slow_7s_ease] text-center mb-20">
-            <span>
-              Symbolizing the bridge between both the physical and virtual
-              worlds.
-            </span>
+          <div className="flex justify-end">
+            <div className="max-w-[600px]">
+              <div className="section-title text-right mt-10">
+                the bonan collection.
+              </div>
+              <div className="section-content text-right">
+                The Bonan Collection contains 4000 different variations of
+                Bonan, each which have its own unique personality and swagger.
+                <br />
+                <br />
+                The story of Bonan was conceptualized and written by the
+                Founder of, Bonanza, Johnathon Tesfaye, and is based on
+                real-life events derived from his own life. Each variation of
+                Bonan was brought to life by the work of Ian Lawrence, the
+                Creative Director of Bonanza.
+                <br />
+                <br />
+                Ian and Johnathon meticulously designed characteristics of
+                this collection to their exact specifications. Aggregating
+                interests from traditional Japanese anime, to urban fashion
+                and hip-hop culture into one overarching brand.
+              </div>
+            </div>
           </div>
-        </div>
+
+          <div className="max-w-[600px]">
+            <div className="section-title mt-10">synchronizing value.</div>
+            <div className="section-content">
+              The Bonanza team aims to garner a community of young
+              entrepreneurs, creators, and artists that can express themselves
+              through our unique brand.
+              <br />
+              <br />
+              Bonanza NFTs demonstrate your individual creativity, adventure,
+              and individuality. Additionally, Bonanza NFTs plan to provide
+              utility allowing holders to gain exclusive access to IRL events,
+              networks, merchandising, and more.
+              <br />
+              <br />
+              We believe that by educating our community on the value of our
+              NFT propositions, we can build an agile ecosystem moving forward
+              with unlimited possibilities.
+            </div>
+          </div>
+        </section>
       </Layout>
     </>
   );
