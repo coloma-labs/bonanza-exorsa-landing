@@ -15,7 +15,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="relative bg-transparent">
+    <nav className="relative bg-transparent z-100">
       <div className="max-w-[1440px] mx-auto pl-4 pr-5">
         <div className="flex justify-between items-center py-6 justify-start">
           <div className="flex justify-start items-center lg:w-0 lg:flex-1">
