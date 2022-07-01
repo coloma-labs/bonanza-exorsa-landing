@@ -17,7 +17,7 @@ export default function Navbar() {
   return (
     <nav className="relative bg-transparent z-100">
       <div className="max-w-[1440px] mx-auto pl-4 pr-5">
-        <div className="flex justify-between items-center py-6 justify-start">
+        <div className="flex justify-between items-center py-6">
           <div className="flex justify-start items-center lg:w-0 lg:flex-1">
             {router.pathname !== '/' ? (
               <Link href="/">
@@ -33,8 +33,8 @@ export default function Navbar() {
                     <Image
                       src="/logos/bonanza-long.png"
                       alt="Bonanza"
-                      height="45px"
-                      width="115px"
+                      height="55px"
+                      width="130px"
                     />
                   )}
                 </div>
@@ -42,7 +42,7 @@ export default function Navbar() {
             ) : (null)}
           </div>
 
-          <div className="flex items-center justify-end lg:w-0">
+          <div className="flex items-center justify-end pb-4 lg:pb-0 lg:w-0">
             {width > 800 ? (
               <div className="flex gap-5 xl:gap-8">
                 <NavBtn text="About" link="/about" />
