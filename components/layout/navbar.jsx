@@ -22,19 +22,15 @@ export default function Navbar() {
             <Link href="/">
               <div className="cursor-pointer">
                 {width > 800 ? (
-                  <TextLoop delay={1000}>
-                    {[1, 2, 3, 4].map((_el, i) => (
-                      <Image
-                        src={`/logos/white/bonanza-${i + 1}.png`}
-                        alt="Bonanza"
-                        height="60px"
-                        width="200px"
-                      />
-                    ))}
-                  </TextLoop>
+                  <Image
+                    src="/logos/bonanza-long.png"
+                    alt="Bonanza"
+                    height="90px"
+                    width="250px"
+                  />
                 ) : (
                   <Image
-                    src="/logos/white/mobile.png"
+                    src="/logos/mobile.png"
                     alt="Bonanza"
                     height="50px"
                     width="46px"
