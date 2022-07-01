@@ -53,12 +53,12 @@ const About = () => {
             </div>
           </div>
 
-          <div className="flex justify-end">
+          <div className="flex justify-start lg:justify-end">
             <div className="max-w-[600px]">
-              <div className="section-title text-right mt-10">
+              <div className="section-title text-left lg:text-right mt-10">
                 our value proposition.
               </div>
-              <div className="section-content text-right">
+              <div className="section-content text-left lg:text-right">
                 A Bonanza NFT demonstrates your individual creativity, and
                 individuality. Additionally, Bonanza NFTs serve as lifelong
                 assets that provide IRL utility. Allowing holders to meet one
