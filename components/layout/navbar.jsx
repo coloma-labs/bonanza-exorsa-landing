@@ -88,19 +88,16 @@ export default function Navbar() {
                   <div className="animate-fade-in-fast absolute right-[20px] z-100">
                     <div className="mt-3 bg-[#f3f5f4] text-black min-w-[100px] text-right py-3 px-5">
                       <ul className="text-xl cursor-pointer">
-                        <Link href="/">
-                          <li className="py-1 transition duration-200 hover:text-themeLightOrange">
-                            Home
-                          </li>
-                        </Link>
-                        <li className="py-1 opacity-[0.6]">Gallery</li>
-                        <li className="py-1 opacity-[0.6]">Store</li>
                         <Link href="/about">
                           <li className="py-1 transition duration-200 hover:text-themeLightOrange">
                             About
                           </li>
                         </Link>
-                        <li className="py-1 opacity-[0.6]">Journey</li>
+                        <li className="py-1 opacity-[0.6]">Store</li>
+                        <li className="py-1 opacity-[0.6]">Manga</li>
+                        <li className="py-1 opacity-[0.6]">Plans</li>
+                        <li className="py-1 opacity-[0.6]">Stories</li>
+                        <li className="py-1 opacity-[0.6]">Docs</li>
                       </ul>
                     </div>
                   </div>
