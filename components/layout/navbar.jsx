@@ -59,7 +59,7 @@ export default function Navbar() {
                   onClick={() => setIsOpen(!isOpen)}
                 >
                   <div
-                    className={`relative flex items-center justify-center w-[36px] h-[36px] transform transition-all bg-[#f3f5f4] ring-0 ring-gray-300 hover:ring-8 ${
+                    className={`relative flex items-center justify-center w-[36px] h-[36px] transform transition-all bg-black ring-0 ring-gray-300 hover:ring-8 ${
                       isOpen && "group-focus:ring-4"
                     } ring-opacity-30 duration-200 shadow-lg`}
                   >
@@ -69,14 +69,14 @@ export default function Navbar() {
                       } origin-center`}
                     >
                       <div
-                        className={`bg-black h-[2px] w-1/2 rounded transform transition-all duration-300 ${
+                        className={`bg-white h-[2px] w-1/2 rounded transform transition-all duration-300 ${
                           isOpen &&
                           "group-focus:-rotate-90 group-focus:-translate-y-[1px]"
                         } origin-right delay-75`}
                       ></div>
-                      <div className="bg-black h-[2px] rounded"></div>
+                      <div className="bg-white h-[2px] rounded"></div>
                       <div
-                        className={`bg-black h-[2px] w-1/2 rounded self-end transform transition-all duration-300 ${
+                        className={`bg-white h-[2px] w-1/2 rounded self-end transform transition-all duration-300 ${
                           isOpen &&
                           "group-focus:-rotate-90 group-focus:translate-y-[1px]"
                         } origin-left delay-75`}
