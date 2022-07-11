@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 body {
-  background-color: #f3f5f4;
-  font-family: "Oswald", sans-serif;
+  background-color: black;
+  font-family: "Gill Sans", sans-serif;
 }
 
 #home-page {
@@ -38,6 +38,7 @@ body {
 }
 
 section {
+  color: white;
   @apply max-w-[1440px] mx-auto md:px-20 py-10;
 }
 
