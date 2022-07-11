@@ -19,7 +19,7 @@ export default function Navbar() {
       <div className="max-w-[1440px] mx-auto pl-4 pr-5">
         <div className="flex justify-between items-center py-6">
           <div className="flex justify-start items-center lg:w-0 lg:flex-1">
-            {router.pathname !== '/' ? (
+            {router.pathname !== "/" ? (
               <Link href="/">
                 <div className="cursor-pointer">
                   {width > 800 ? (
@@ -39,7 +39,7 @@ export default function Navbar() {
                   )}
                 </div>
               </Link>
-            ) : (null)}
+            ) : null}
           </div>
 
           <div className="flex items-center justify-end pb-4 lg:pb-0 lg:w-0">

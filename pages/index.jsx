@@ -67,7 +67,7 @@ const Home = () => {
           content="nft, opensea, nft meaning, nft art, nft crypto, non fungible token, opensea nft, nft token, nft crypto art, crypto nft, coinbase nft, nfts crypto, nft buy, nft for sale, buy nfts, nft opensea, crypto, cryptocurrency, ethereum, eth"
         />
       </Head>
-      
+
       <Layout>
         <div
           id="home-page"
@@ -75,7 +75,6 @@ const Home = () => {
             manifestoIsOpen ? "overflow-y-hidden" : "overflow-y-auto"
           }`}
         >
-
           {/* Background Video */}
           <video className="absolute -z-10" autoPlay muted loop id="bgVideo">
             <source src={backgroundVideo} type="video/mp4" />
@@ -95,7 +94,9 @@ const Home = () => {
           </div> */}
 
           <div
-            className={'absolute bottom-0 left-0 h-screen w-full flex flex-col justify-center items-center'}
+            className={
+              "absolute bottom-0 left-0 h-screen w-full flex flex-col justify-center items-center"
+            }
           >
             <div className="pb-44" />
             <Image

@@ -7,7 +7,7 @@ import SocialIconBtn from "../buttons/social-icon-btn";
 
 function Footer() {
   const router = useRouter();
-  if (router.pathname !== '/')
+  if (router.pathname !== "/")
     return (
       <div className="w-full bg-slate-300 py-5 lg:py-10">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 z-[10]">
@@ -76,8 +76,7 @@ function Footer() {
         </div>
       </div>
     );
-  else
-    return null;
+  else return null;
 }
 
 export default Footer;
