@@ -1,12 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { FaDiscord, FaTwitter } from "react-icons/fa";
-import { RiInstagramFill } from "react-icons/ri";
 import { useWindowSize } from "../../hooks/window";
 import NavBtn from "../buttons/nav-btn";
-import SocialIconBtn from "../buttons/social-icon-btn";
-import { TextLoop } from "react-text-loop-next";
 import { useRouter } from "next/router";
 
 export default function Navbar() {
@@ -33,8 +29,8 @@ export default function Navbar() {
                     <Image
                       src="/logos/bonanza-long.png"
                       alt="Bonanza"
-                      height="55px"
-                      width="130px"
+                      height="60px"
+                      width="10px"
                     />
                   )}
                 </div>
@@ -48,9 +44,8 @@ export default function Navbar() {
                 <NavBtn text="About" link="/about" />
                 <NavBtn text="Store" />
                 <NavBtn text="Manga" />
-                <NavBtn text="Plans" />
                 <NavBtn text="Stories" />
-                <NavBtn text="Docs" />
+                <NavBtn text="Docs" link="https://app.gitbook.com/s/UVfKB71MSjbBqwtKc42K/" newTab />
               </div>
             ) : (
               <div onBlur={() => setIsOpen(false)}>
@@ -95,10 +90,13 @@ export default function Navbar() {
                         </Link>
                         <li className="py-1 opacity-[0.6]">Store</li>
                         <li className="py-1 opacity-[0.6]">Manga</li>
-                        <li className="py-1 opacity-[0.6]">Plans</li>
                         <li className="py-1 opacity-[0.6]">Stories</li>
-                        <li className="py-1 opacity-[0.6]">Docs</li>
-                      </ul>
+                        <a href="https://app.gitbook.com/s/UVfKB71MSjbBqwtKc42K/" target="_blank">
+                          <li className="py-1 transition duration-200 hover:text-themeLightOrange">
+                            Docs
+                          </li>
+                        </a>
+                        </ul>
                     </div>
                   </div>
                 )}

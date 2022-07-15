@@ -1,45 +1,20 @@
 // Core
 import Script from "next/script";
 import Head from "next/head";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 // Components
-import Manifesto from "../components/manifesto";
-import NavBar from "../components/layout/navbar";
-import Footer from "../components/layout/footer";
-import backgroundVideo from "../public/background-animation.mp4";
+import backgroundVideo from "../public/desktop-bg-min.mp4";
 import Image from "next/image";
 // Externals
-import { FaTwitter, FaDiscord } from "react-icons/fa";
+import { FaTwitter, FaDiscord, FaInstagram } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
 import { useWindowSize } from "../hooks/window";
 import Layout from "../components/layout";
+import SocialIconBtn from "../components/buttons/social-icon-btn";
 
 const Home = () => {
   const [manifestoIsOpen, setManifestoIsOpen] = useState(false);
-  const [scrollY, setScrollY] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-    handleScroll();
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  useEffect(() => {
-    if (document) {
-      if (manifestoIsOpen) {
-        window.scrollTo(0, 2);
-        document.body.style.overflowY = "hidden";
-      } else {
-        document.body.style.overflowY = "scroll";
-      }
-    }
-  }, [manifestoIsOpen]);
+  const { width } = useWindowSize();
 
   return (
     <>
@@ -60,7 +35,7 @@ const Home = () => {
       </Script>
 
       <Head>
-        <title>Bonanza Exorsa</title>
+        <title>Bonanza Exorsa - A Metaphysical Brand</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta
           name="keywords"
@@ -69,103 +44,44 @@ const Home = () => {
       </Head>
 
       <Layout>
-        <div
-          id="home-page"
-          className={`${
-            manifestoIsOpen ? "overflow-y-hidden" : "overflow-y-auto"
-          }`}
-        >
-          {/* Background Video */}
-          <video className="absolute -z-10" autoPlay muted loop id="bgVideo">
-            <source src={backgroundVideo} type="video/mp4" />
-          </video>
+        <div id="home-page">
+          {width > 900 ? (
+            <video className="absolute -z-10" autoPlay muted loop id="bgVideo">
+              <source src={backgroundVideo} type="video/mp4" />
+            </video>
+          ) : (
+            <div>
+              <Image 
+                src="/mobile-bg.jpg"
+                alt="cross the bridge"
+                layout="fill"
+                objectFit="cover"
+              />
+            </div>
+          )}
 
-          {/* <div
-            className={`flex justify-center items-center manifesto-wrapper transition duration-500 
-            ${scrollY > 500 ? "bg-[#f3f5f4]" : "bg-transparent"}
-            ${manifestoIsOpen ? "!absolute w-full top-[-2px]" : ""}
-          `}
-          >
-            <Manifesto
-              setIsOpen={setManifestoIsOpen}
-              isOpen={manifestoIsOpen}
-              isScrolled={scrollY > 500}
-            />
-          </div> */}
-
-          <div
-            className={
-              "absolute bottom-0 left-0 h-screen w-full flex flex-col justify-center items-center"
-            }
-          >
-            <div className="pb-44" />
+          <div className="absolute bottom-0 left-0 h-screen w-full flex flex-col justify-center items-center">
             <Image
               src="/logos/bonanza-long.png"
               alt="Bonanza"
-              height="90px"
-              width="250px"
+              height="100px"
+              width="275px"
             />
+            <div className="flex gap-5">
+              <SocialIconBtn 
+                icon={FaDiscord}
+                link="https://discord.gg/Wz4g2Wrmuh"
+              />
+              <SocialIconBtn 
+                icon={FaTwitter}
+                link="https://twitter.com/bonanzaexorsa"
+              />
+              <SocialIconBtn 
+                icon={FaInstagram}
+                link="https://www.instagram.com/bonanzaexorsa/"
+              />
+            </div>
           </div>
-
-          {/* <div className="bg-[#f3f5f4]">
-            <section className="bg-[#f3f5f4] py-20 lg:py-50 2xl:py-[10rem] px-5">
-              <div className="max-w-[600px]">
-                <div className="section-title">a metaphysical brand.</div>
-                <div className="section-content">
-                  Bonanza, is the world’s first ever Metaphysical Brand. Our brand
-                  symbolizes one’s journey towards the investigation of reality,
-                  self-worth, identity, and possibility.
-                </div>
-              </div>
-
-              <div className="flex justify-end">
-                <div className="max-w-[600px]">
-                  <div className="section-title text-right mt-10">
-                    the bonan collection.
-                  </div>
-                  <div className="section-content text-right">
-                    The Bonan Collection contains 4000 different variations of
-                    Bonan, each which have its own unique personality and swagger.
-                    <br />
-                    <br />
-                    The story of Bonan was conceptualized and written by the
-                    Founder of, Bonanza, Johnathon Tesfaye, and is based on
-                    real-life events derived from his own life. Each variation of
-                    Bonan was brought to life by the work of Ian Lawrence, the
-                    Creative Director of Bonanza.
-                    <br />
-                    <br />
-                    Ian and Johnathon meticulously designed characteristics of
-                    this collection to their exact specifications. Aggregating
-                    interests from traditional Japanese anime, to urban fashion
-                    and hip-hop culture into one overarching brand.
-                  </div>
-                </div>
-              </div>
-
-              <div className="max-w-[600px]">
-                <div className="section-title mt-10">synchronizing value.</div>
-                <div className="section-content">
-                  The Bonanza team aims to garner a community of young
-                  entrepreneurs, creators, and artists that can express themselves
-                  through our unique brand.
-                  <br />
-                  <br />
-                  Bonanza NFTs demonstrate your individual creativity, adventure,
-                  and individuality. Additionally, Bonanza NFTs plan to provide
-                  utility allowing holders to gain exclusive access to IRL events,
-                  networks, merchandising, and more.
-                  <br />
-                  <br />
-                  We believe that by educating our community on the value of our
-                  NFT propositions, we can build an agile ecosystem moving forward
-                  with unlimited possibilities.
-                </div>
-              </div>
-            </section>
-          </div> */}
-
-          {/* <Footer /> */}
         </div>
       </Layout>
     </>

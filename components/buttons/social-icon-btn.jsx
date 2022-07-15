@@ -4,7 +4,7 @@ function SocialIconBtn(props) {
       href={props.link || "#"}
       target="_blank"
       className={`${
-        props.color ? props.color : "text-black"
+        props.color ? props.color : "text-white"
       } hover:scale-[1.1] duration-200`}
     >
       <props.icon className="text-3xl" />

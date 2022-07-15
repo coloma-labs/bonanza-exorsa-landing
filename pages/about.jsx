@@ -1,10 +1,18 @@
 // Components
 import Head from "next/head";
+import Image from "next/image";
 import Script from "next/script";
+import { useEffect, useState } from "react";
 import Layout from "../components/layout";
-import { TextLoop } from "react-text-loop-next";
 
 const About = () => {
+  const [isShowing, setIsShowing] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsShowing(true), 3000);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <>
       <Script
@@ -42,8 +50,13 @@ const About = () => {
           </h1>
         </div>
 
-        <section className="bg-black py-20 lg:py-50 2xl:py-[10rem] px-5">
-          <div className="max-w-[600px]">
+        <section className={`bg-black pb-20 lg:pb-50 2xl:pb-[10rem] px-5 overflow-x-hidden`}>
+        {!isShowing && (<div className="h-screen" />)}
+        {isShowing && (
+        <>
+        <div data-aos="fade-left">
+          <div className="flex flex-col gap-10 md:flex-row justify-between items-center">
+          <div className="max-w-[500px]">
             <div className="section-title">a metaphysical brand.</div>
             <div className="section-content">
               Bonanza is the world’s first ever Metaphysical Brand. Our team
@@ -52,9 +65,20 @@ const About = () => {
               to express themselves.
             </div>
           </div>
+          <div>
+              <Image 
+                src="/about/about-1.svg"
+                alt="Bonan NFT"
+                height="300"
+                width="300"
+              />
+            </div>
+          </div>
+          </div>
 
-          <div className="flex justify-start lg:justify-end">
-            <div className="max-w-[600px]">
+          <div data-aos="fade-right">
+          <div className="flex flex-col gap-10 md:flex-row-reverse justify-between items-center mt-10">
+            <div className="max-w-[500px]">
               <div className="section-title text-left lg:text-right mt-10">
                 our value proposition.
               </div>
@@ -70,9 +94,20 @@ const About = () => {
                 possibilities for future collections.
               </div>
             </div>
+            <div>
+              <Image 
+                src="/about/about-2.svg"
+                alt="Bonan NFT"
+                height="300"
+                width="300"
+              />
+            </div>
+          </div>
           </div>
 
-          <div className="max-w-[600px]">
+          <div data-aos="fade-left">
+          <div className="flex flex-col gap-10 md:flex-row justify-between items-center mt-10">
+          <div className="max-w-[500px]">
             <div className="section-title mt-10">the bonan collection.</div>
             <div className="section-content">
               The Bonan Collection contains 4000 different variations of Bonan,
@@ -91,6 +126,18 @@ const About = () => {
               hip-hop culture into one overarching brand.
             </div>
           </div>
+          <div>
+              <Image 
+                src="/about/about-3.svg"
+                alt="Bonan NFT"
+                height="300"
+                width="300"
+              />
+            </div>
+            </div>
+            </div>
+            </>
+          )}
         </section>
       </Layout>
     </>
