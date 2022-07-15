@@ -11,7 +11,8 @@ function NavBtn({ text, link, newTab }) {
         </div>
       </Link>
     );
-  } else if (newTab && link) {
+  }
+  if (newTab) {
     return (
       <a href={link || "/#"} target="_blank">
         <div
