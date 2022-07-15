@@ -20,7 +20,7 @@ function NavBtn({ text, link, newTab }) {
           <span className="text-2xl">{text}</span>
         </div>
       </a>
-    )
+    );
   } else {
     return (
       <div className="cursor-not-allowed text-gray-500">

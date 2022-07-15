@@ -51,7 +51,7 @@ const Home = () => {
             </video>
           ) : (
             <div>
-              <Image 
+              <Image
                 src="/mobile-bg.jpg"
                 alt="cross the bridge"
                 layout="fill"
@@ -68,15 +68,15 @@ const Home = () => {
               width="275px"
             />
             <div className="flex gap-5">
-              <SocialIconBtn 
+              <SocialIconBtn
                 icon={FaDiscord}
                 link="https://discord.gg/Wz4g2Wrmuh"
               />
-              <SocialIconBtn 
+              <SocialIconBtn
                 icon={FaTwitter}
                 link="https://twitter.com/bonanzaexorsa"
               />
-              <SocialIconBtn 
+              <SocialIconBtn
                 icon={FaInstagram}
                 link="https://www.instagram.com/bonanzaexorsa/"
               />

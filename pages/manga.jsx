@@ -33,7 +33,7 @@ const Manga = () => {
       </Head>
 
       <Layout>
-        <Image 
+        <Image
           src="/manga.svg"
           alt="Bonanza Manga"
           layout="fill"

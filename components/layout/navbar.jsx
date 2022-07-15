@@ -45,7 +45,11 @@ export default function Navbar() {
                 <NavBtn text="Store" />
                 <NavBtn text="Manga" />
                 <NavBtn text="Stories" />
-                <NavBtn text="Docs" link="https://app.gitbook.com/s/UVfKB71MSjbBqwtKc42K/" newTab />
+                <NavBtn
+                  text="Docs"
+                  link="https://app.gitbook.com/s/UVfKB71MSjbBqwtKc42K/"
+                  newTab
+                />
               </div>
             ) : (
               <div onBlur={() => setIsOpen(false)}>
@@ -91,12 +95,15 @@ export default function Navbar() {
                         <li className="py-1 opacity-[0.6]">Store</li>
                         <li className="py-1 opacity-[0.6]">Manga</li>
                         <li className="py-1 opacity-[0.6]">Stories</li>
-                        <a href="https://app.gitbook.com/s/UVfKB71MSjbBqwtKc42K/" target="_blank">
+                        <a
+                          href="https://app.gitbook.com/s/UVfKB71MSjbBqwtKc42K/"
+                          target="_blank"
+                        >
                           <li className="py-1 transition duration-200 hover:text-themeLightOrange">
                             Docs
                           </li>
                         </a>
-                        </ul>
+                      </ul>
                     </div>
                   </div>
                 )}
