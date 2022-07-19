@@ -64,8 +64,8 @@ const Home = () => {
             <Image
               src="/logos/bonanza-long.png"
               alt="Bonanza"
-              height="100px"
-              width="275px"
+              height={width > 900 ? "100px" : "90px"}
+              width={width > 900 ? "275px" : "250px"}
             />
             <div className="flex gap-5">
               <SocialIconBtn
