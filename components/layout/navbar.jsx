@@ -12,38 +12,29 @@ export default function Navbar() {
 
   return (
     <nav className="relative bg-transparent z-100">
-      <div className="max-w-[1440px] mx-auto pl-4 pr-5">
+      <div className="max-w-[1440px] mx-auto px-5 lg:px-10">
         <div className="flex justify-between items-center py-6">
-          <div className="flex justify-start items-center lg:w-0 lg:flex-1">
+          <div className="flex items-center">
             {router.pathname !== "/" ? (
               <Link href="/">
-                <div className="cursor-pointer">
-                  {width > 800 ? (
-                    <Image
-                      src="/logos/bonanza-long.png"
-                      alt="Bonanza"
-                      height="90px"
-                      width="250px"
-                    />
-                  ) : (
-                    <Image
-                      src="/logos/bonanza-long.png"
-                      alt="Bonanza"
-                      height="60px"
-                      width="150px"
-                    />
-                  )}
+                <div className="cursor-pointer flex items-center">
+                  <Image
+                    src="/logos/bonanza-long-cropped.png"
+                    alt="Bonanza"
+                    height="41px"
+                    width="172px"
+                  />
                 </div>
               </Link>
             ) : null}
           </div>
 
-          <div className="flex items-center justify-end pb-4 lg:pb-0 lg:w-0">
+          <div className={`flex items-center pb-2 md:pb-0`}>
             {width > 800 ? (
               <div className="flex gap-5 xl:gap-8">
                 <NavBtn text="About" link="/about" />
                 <NavBtn text="Store" />
-                <NavBtn text="Manga" />
+                <NavBtn text="Manga" link="/manga" />
                 <NavBtn text="Stories" />
                 <NavBtn
                   text="Docs"
@@ -58,7 +49,9 @@ export default function Navbar() {
                   onClick={() => setIsOpen(!isOpen)}
                 >
                   <div
-                    className={`relative flex items-center justify-center w-[36px] h-[36px] transform transition-all bg-black ring-0 ring-gray-300 hover:ring-8 ${
+                    className={`relative flex items-center justify-center w-[36px] h-[36px] transform transition-all ${
+                      router.pathname === "/" ? "bg-black" : "bg-white"
+                    } ring-0 ring-gray-300 hover:ring-8 ${
                       isOpen && "group-focus:ring-4"
                     } ring-opacity-30 duration-200 shadow-lg`}
                   >
@@ -68,14 +61,22 @@ export default function Navbar() {
                       } origin-center`}
                     >
                       <div
-                        className={`bg-white h-[2px] w-1/2 rounded transform transition-all duration-300 ${
+                        className={`${
+                          router.pathname === "/" ? "bg-white" : "bg-black"
+                        } h-[2px] w-1/2 rounded transform transition-all duration-300 ${
                           isOpen &&
                           "group-focus:-rotate-90 group-focus:-translate-y-[1px]"
                         } origin-right delay-75`}
                       ></div>
-                      <div className="bg-white h-[2px] rounded"></div>
                       <div
-                        className={`bg-white h-[2px] w-1/2 rounded self-end transform transition-all duration-300 ${
+                        className={`${
+                          router.pathname === "/" ? "bg-white" : "bg-black"
+                        } h-[2px] rounded`}
+                      />
+                      <div
+                        className={`${
+                          router.pathname === "/" ? "bg-white" : "bg-black"
+                        } h-[2px] w-1/2 rounded self-end transform transition-all duration-300 ${
                           isOpen &&
                           "group-focus:-rotate-90 group-focus:translate-y-[1px]"
                         } origin-left delay-75`}
@@ -93,7 +94,11 @@ export default function Navbar() {
                           </li>
                         </Link>
                         <li className="py-1 opacity-[0.6]">Store</li>
-                        <li className="py-1 opacity-[0.6]">Manga</li>
+                        <Link href="/manga">
+                          <li className="py-1 transition duration-200 hover:text-themeLightOrange">
+                            Manga
+                          </li>
+                        </Link>
                         <li className="py-1 opacity-[0.6]">Stories</li>
                         <a
                           href="https://bonanzaexorsa.gitbook.io/bonanza-whitepaper/"

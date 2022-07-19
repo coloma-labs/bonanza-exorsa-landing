@@ -13,7 +13,6 @@ import Layout from "../components/layout";
 import SocialIconBtn from "../components/buttons/social-icon-btn";
 
 const Home = () => {
-  const [manifestoIsOpen, setManifestoIsOpen] = useState(false);
   const { width } = useWindowSize();
 
   return (
@@ -62,12 +61,12 @@ const Home = () => {
 
           <div className="absolute bottom-0 left-0 h-screen w-full flex flex-col justify-center items-center">
             <Image
-              src="/logos/bonanza-long.png"
+              src="/logos/bonanza-long-cropped.png"
               alt="Bonanza"
-              height={width > 900 ? "100px" : "90px"}
-              width={width > 900 ? "275px" : "250px"}
+              height="50px"
+              width="210px"
             />
-            <div className="flex gap-5">
+            <div className="flex gap-5 mt-5">
               <SocialIconBtn
                 icon={FaDiscord}
                 link="https://discord.gg/Wz4g2Wrmuh"

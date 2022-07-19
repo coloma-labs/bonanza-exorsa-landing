@@ -1,10 +1,18 @@
 // Components
 import Head from "next/head";
-import Image from "next/image";
 import Script from "next/script";
+import { useEffect, useState } from "react";
 import Layout from "../components/layout";
 
 const Manga = () => {
+  const [timer, setTimer] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setTimer(true), 2500);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <>
       <Script
@@ -33,12 +41,22 @@ const Manga = () => {
       </Head>
 
       <Layout>
-        <Image
-          src="/manga.svg"
-          alt="Bonanza Manga"
-          layout="fill"
-          objectFit="cover"
-        />
+        <div className="flex flex-col justify-center items-center">
+          <div className="section-title text-white">
+            <h1>Manga</h1>
+          </div>
+          <div className="max-w-[800px] min-h-screen">
+            {!timer ? (
+              <h3 className="text-white mt-20 text-3xl animate-fade-out-slow">
+                Preparing Bonan's Journey
+              </h3>
+            ) : (
+              <div className="animate-fade-in">
+                <img src="/manga.svg" alt="Bonanza Manga" />
+              </div>
+            )}
+          </div>
+        </div>
       </Layout>
     </>
   );

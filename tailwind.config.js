@@ -15,6 +15,11 @@ module.exports = {
           "0%": { opacity: "1" },
           "100%": { opacity: "0" },
         },
+        "fade-out-slow": {
+          "0%": { opacity: "1" },
+          "50%": { opacity: "1" },
+          "100%": { opacity: "0" },
+        },
         "fade-in": {
           "0%": { opacity: "0" },
           "20%": { opacity: "0" },
@@ -40,6 +45,7 @@ module.exports = {
         "scale-repeat": "scale-repeat 1.5s ease-in-out",
         "fade-out": "fade-out 2s ease",
         "fade-out-fast": "fade-out 1s ease",
+        "fade-out-slow": "fade-out-slow 3s ease",
         "fade-in-slow": "fade-in-slow 4s ease",
         "fade-in": "fade-in 2s ease",
         "fade-in-fast": "fade-in 1s ease",
