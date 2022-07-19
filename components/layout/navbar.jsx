@@ -30,7 +30,7 @@ export default function Navbar() {
                       src="/logos/bonanza-long.png"
                       alt="Bonanza"
                       height="60px"
-                      width="10px"
+                      width="150px"
                     />
                   )}
                 </div>
