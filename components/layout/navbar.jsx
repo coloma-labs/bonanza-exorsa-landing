@@ -47,7 +47,7 @@ export default function Navbar() {
                 <NavBtn text="Stories" />
                 <NavBtn
                   text="Docs"
-                  link="https://app.gitbook.com/s/UVfKB71MSjbBqwtKc42K/"
+                  link="https://bonanzaexorsa.gitbook.io/bonanza-whitepaper/"
                   newTab
                 />
               </div>
@@ -96,7 +96,7 @@ export default function Navbar() {
                         <li className="py-1 opacity-[0.6]">Manga</li>
                         <li className="py-1 opacity-[0.6]">Stories</li>
                         <a
-                          href="https://app.gitbook.com/s/UVfKB71MSjbBqwtKc42K/"
+                          href="https://bonanzaexorsa.gitbook.io/bonanza-whitepaper/"
                           target="_blank"
                         >
                           <li className="py-1 transition duration-200 hover:text-themeLightOrange">
