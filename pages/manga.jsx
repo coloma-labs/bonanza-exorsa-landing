@@ -42,12 +42,12 @@ const Manga = () => {
 
       <Layout>
         <div className="flex flex-col justify-center items-center">
-          <div className="section-title text-[#5c5f82]">
+          <div className="section-title text-themePurple">
             <h1>Manga</h1>
           </div>
           <div className="max-w-[800px] min-h-screen">
             {!timer ? (
-              <h3 className="text-[#5c5f82] mt-20 text-3xl animate-fade-out-slow">
+              <h3 className="text-themePurple mt-20 text-3xl animate-fade-out-slow">
                 Preparing Bonan's Journey
               </h3>
             ) : (

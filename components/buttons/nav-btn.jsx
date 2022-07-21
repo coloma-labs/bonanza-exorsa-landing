@@ -8,7 +8,7 @@ function NavBtn({ text, link, newTab }) {
     return (
       <Link href={link || "/#"}>
         <div
-          className={`text-[#5c5f82] cursor-pointer hover:scale-[1.1] duration-200`}
+          className={`text-themePurple cursor-pointer hover:scale-[1.1] duration-200`}
         >
           <span className="text-2xl">{text}</span>
         </div>
@@ -19,7 +19,7 @@ function NavBtn({ text, link, newTab }) {
     return (
       <a href={link || "/#"} target="_blank">
         <div
-          className={`text-[#5c5f82] cursor-pointer hover:scale-[1.1] duration-200`}
+          className={`text-themePurple cursor-pointer hover:scale-[1.1] duration-200`}
         >
           <span className="text-2xl">{text}</span>
         </div>
