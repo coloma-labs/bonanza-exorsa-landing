@@ -64,9 +64,7 @@ export default function Navbar() {
                           "group-focus:-rotate-90 group-focus:-translate-y-[1px]"
                         } origin-right delay-75`}
                       ></div>
-                      <div
-                        className={`bg-white h-[2px] rounded`}
-                      />
+                      <div className={`bg-white h-[2px] rounded`} />
                       <div
                         className={`bg-white h-[2px] w-1/2 rounded self-end transform transition-all duration-300 ${
                           isOpen &&
