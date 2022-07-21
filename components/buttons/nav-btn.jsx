@@ -1,11 +1,14 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 function NavBtn({ text, link, newTab }) {
+  const router = useRouter();
+
   if (link) {
     return (
       <Link href={link || "/#"}>
         <div
-          className={`text-white cursor-pointer hover:scale-[1.1] duration-200`}
+          className={`text-[#5c5f82] cursor-pointer hover:scale-[1.1] duration-200`}
         >
           <span className="text-2xl">{text}</span>
         </div>
@@ -16,7 +19,7 @@ function NavBtn({ text, link, newTab }) {
     return (
       <a href={link || "/#"} target="_blank">
         <div
-          className={`text-white cursor-pointer hover:scale-[1.1] duration-200`}
+          className={`text-[#5c5f82] cursor-pointer hover:scale-[1.1] duration-200`}
         >
           <span className="text-2xl">{text}</span>
         </div>
@@ -24,7 +27,7 @@ function NavBtn({ text, link, newTab }) {
     );
   } else {
     return (
-      <div className="cursor-not-allowed text-gray-500">
+      <div className="cursor-not-allowed text-gray-400">
         <span className="text-2xl">{text}</span>
       </div>
     );

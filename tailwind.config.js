@@ -6,6 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      boxShadow: {
+        "inner-white-radial": "inset 0px 0px 10px 10px #FFFFFF",
+      },
       keyframes: {
         "scale-repeat": {
           "60%": { transform: "scale(1.1)" },
@@ -45,7 +48,7 @@ module.exports = {
         "scale-repeat": "scale-repeat 1.5s ease-in-out",
         "fade-out": "fade-out 2s ease",
         "fade-out-fast": "fade-out 1s ease",
-        "fade-out-slow": "fade-out-slow 3s ease",
+        "fade-out-slow": "fade-out-slow 4s ease",
         "fade-in-slow": "fade-in-slow 4s ease",
         "fade-in": "fade-in 2s ease",
         "fade-in-fast": "fade-in 1s ease",

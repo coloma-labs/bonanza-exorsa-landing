@@ -44,27 +44,28 @@ const Home = () => {
 
       <Layout>
         <div id="home-page">
-          {width > 900 ? (
+          {/* {width > 900 ? (
             <video className="absolute -z-10" autoPlay muted loop id="bgVideo">
               <source src={backgroundVideo} type="video/mp4" />
             </video>
-          ) : (
-            <div>
-              <Image
-                src="/mobile-bg.jpg"
-                alt="cross the bridge"
-                layout="fill"
-                objectFit="cover"
-              />
-            </div>
-          )}
+          ) : ( */}
+          <div>
+            <Image
+              src="/anime-city.gif"
+              alt="cross the bridge"
+              layout="fill"
+              objectFit="cover"
+              objectPosition="70%"
+            />
+          </div>
+          {/* )} */}
 
           <div className="absolute bottom-0 left-0 h-screen w-full flex flex-col justify-center items-center">
             <Image
               src="/logos/bonanza-long-cropped.png"
               alt="Bonanza"
-              height="50px"
-              width="210px"
+              height="57px"
+              width="240px"
             />
             <div className="flex gap-5 mt-5">
               <SocialIconBtn
