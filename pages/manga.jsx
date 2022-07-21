@@ -8,7 +8,7 @@ const Manga = () => {
   const [timer, setTimer] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setTimer(true), 2500);
+    const timer = setTimeout(() => setTimer(true), 3500);
 
     return () => clearTimeout(timer);
   }, []);
@@ -42,16 +42,16 @@ const Manga = () => {
 
       <Layout>
         <div className="flex flex-col justify-center items-center">
-          <div className="section-title text-white">
+          <div className="section-title text-[#5c5f82]">
             <h1>Manga</h1>
           </div>
           <div className="max-w-[800px] min-h-screen">
             {!timer ? (
-              <h3 className="text-white mt-20 text-3xl animate-fade-out-slow">
+              <h3 className="text-[#5c5f82] mt-20 text-3xl animate-fade-out-slow">
                 Preparing Bonan's Journey
               </h3>
             ) : (
-              <div className="animate-fade-in">
+              <div className="animate-fade-in shadow-2xl">
                 <img src="/manga.svg" alt="Bonanza Manga" />
               </div>
             )}

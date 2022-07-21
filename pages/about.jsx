@@ -51,7 +51,7 @@ const About = () => {
         </div>
 
         <section
-          className={`bg-black pb-20 lg:pb-50 2xl:pb-[10rem] px-5 overflow-x-hidden`}
+          className={`pb-20 lg:pb-50 2xl:pb-[10rem] px-5 overflow-x-hidden`}
         >
           {!isShowing && <div className="h-screen" />}
           {isShowing && (
@@ -70,7 +70,7 @@ const About = () => {
                 </div>
                 <div data-aos="fade-left">
                   <Image
-                    src="/about/about-1.svg"
+                    src="/about/about-new-1.svg"
                     alt="Bonan NFT"
                     height="300"
                     width="300"
@@ -97,7 +97,7 @@ const About = () => {
                 </div>
                 <div data-aos="fade-left">
                   <Image
-                    src="/about/about-2.svg"
+                    src="/about/about-new-2.svg"
                     alt="Bonan NFT"
                     height="300"
                     width="300"
@@ -132,7 +132,7 @@ const About = () => {
                 </div>
                 <div data-aos="fade-left">
                   <Image
-                    src="/about/about-3.svg"
+                    src="/about/about-new-3.svg"
                     alt="Bonan NFT"
                     height="300"
                     width="300"
