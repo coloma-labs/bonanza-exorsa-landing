@@ -39,23 +39,17 @@ const Manga = () => {
             <h1>Manga</h1>
           </div>
           <div className="max-w-[800px] min-h-screen">
-            {/* {!timer ? (
-              <h3 className="text-themePurple mt-20 text-3xl animate-fade-out-slow">
-                Preparing Bonan's Journey
-              </h3>
-            ) : ( */}
-              <div className="animate-fade-in shadow-2xl">
-                {["1", "2", "3", "5", "6", "7"].map((el) => (
-                  <Image 
-                    src={`/manga/BONAN_MANGA_0${el}.svg`}
-                    alt={`Manga ${el}`}
-                    width="2867"
-                    height="4096"
-                    loading="lazy"
-                  />
-                ))}
-              </div>
-            {/* )} */}
+            <div className="animate-fade-in shadow-2xl">
+              {["1", "2", "3", "5", "6", "7"].map((el) => (
+                <Image
+                  src={`/manga/BONAN_MANGA_0${el}.svg`}
+                  alt={`Manga ${el}`}
+                  width="2867"
+                  height="4096"
+                  loading="lazy"
+                />
+              ))}
+            </div>
           </div>
         </div>
       </Layout>
