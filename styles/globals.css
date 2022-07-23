@@ -48,6 +48,10 @@ section {
   @apply mb-8;
 }
 
+.section-content {
+  @apply text-lg
+}
+
 .section-description {
   @apply leading-relaxed;
   @apply my-4;
@@ -85,4 +89,9 @@ section {
 
 .footer-menu:hover {
   transform: scale(1.05);
+}
+
+/* Picture Frame */
+.framed {
+  box-shadow: -50px -50px 0 -40px #FFBA52, 50px 50px 0 -40px #FFBA52;
 }
