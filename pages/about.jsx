@@ -12,7 +12,7 @@ const About = () => {
   const [isShowing, setIsShowing] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsShowing(true), 3000);
+    const timer = setTimeout(() => setIsShowing(true), 2000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -121,7 +121,7 @@ const About = () => {
                     the bonan collection.
                   </div>
                   <div className="section-content">
-                    The Bonan Collection contains 4000 different variations of
+                    The Bonan Collection contains different variations of
                     Bonan, each which have their own unique personality and
                     swagger.
                     <br />
