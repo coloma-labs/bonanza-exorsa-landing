@@ -43,7 +43,7 @@ const About = () => {
         />
       </Head>
 
-      <Layout style={`${isShowing ? '' : 'h-screen overflow-hidden'}`}>
+      <Layout style={`${isShowing ? "" : "h-screen overflow-hidden"}`}>
         <div
           id="about-banner"
           className="min-h-[120px] md:min-h-[150px] lg:min-h-[180px] animate-banner-load px-5 flex items-center mb-5 md:mb-10"
@@ -56,7 +56,9 @@ const About = () => {
         <section
           className={`pb-20 lg:pb-50 2xl:pb-[10rem] px-5 overflow-x-hidden`}
         >
-          {!isShowing ? (<div className="h-[300px]" />) : (
+          {!isShowing ? (
+            <div className="h-[300px]" />
+          ) : (
             <>
               <div className="flex flex-col gap-10 md:gap-20 lg:gap-60 md:flex-row md:pb-10 xl:pb-20 justify-between items-center">
                 <div className="" data-aos="fade-right">
@@ -71,46 +73,52 @@ const About = () => {
                   </div>
                 </div>
                 <Parallax speed={width > 768 ? 5 : 0}>
-                <div className="shadow-2xl">
-                  <div data-aos="fade-left" className="w-[300px] h-[300px] framed">
-                    <Image
-                      src="/about/about-new-1.svg"
-                      alt="Bonan NFT"
-                      layout="fill"
-                      objectFit="cover"
-                    />
-                  </div>
+                  <div className="shadow-2xl">
+                    <div
+                      data-aos="fade-left"
+                      className="w-[300px] h-[300px] framed"
+                    >
+                      <Image
+                        src="/about/about-new-1.svg"
+                        alt="Bonan NFT"
+                        layout="fill"
+                        objectFit="cover"
+                      />
+                    </div>
                   </div>
                 </Parallax>
               </div>
 
               <div className="flex flex-col gap-10 md:gap-20 lg:gap-60 md:flex-row-reverse md:pb-10 xl:pb-20 justify-between items-center mt-10">
-                  <div className="" data-aos="fade-right">
-                    <div className="section-title text-left lg:text-right mt-10">
-                      our value proposition.
-                    </div>
-                    <div className="section-content text-left lg:text-right">
-                      A Bonanza NFT demonstrates your individual creativity, and
-                      individuality. Additionally, Bonanza NFTs serve as lifelong
-                      assets that provide IRL utility. Allowing holders to meet
-                      one another at our global events.
-                      <br />
-                      <br />
-                      We believe that by educating our community on the value of
-                      our NFT propositions, we can build an agile ecosystem with
-                      unlimited possibilities for future collections.
-                    </div>
+                <div className="" data-aos="fade-right">
+                  <div className="section-title text-left lg:text-right mt-10">
+                    our value proposition.
                   </div>
+                  <div className="section-content text-left lg:text-right">
+                    A Bonanza NFT demonstrates your individual creativity, and
+                    individuality. Additionally, Bonanza NFTs serve as lifelong
+                    assets that provide IRL utility. Allowing holders to meet
+                    one another at our global events.
+                    <br />
+                    <br />
+                    We believe that by educating our community on the value of
+                    our NFT propositions, we can build an agile ecosystem with
+                    unlimited possibilities for future collections.
+                  </div>
+                </div>
                 <Parallax speed={width > 768 ? -5 : 0}>
-                <div className="shadow-2xl">
-                  <div data-aos="fade-left" className="w-[300px] h-[300px] framed">
-                    <Image
-                      src="/about/about-new-2.svg"
-                      alt="Bonan NFT"
-                      layout="fill"
-                      objectFit="cover"
-                    />
-                  </div>
+                  <div className="shadow-2xl">
+                    <div
+                      data-aos="fade-left"
+                      className="w-[300px] h-[300px] framed"
+                    >
+                      <Image
+                        src="/about/about-new-2.svg"
+                        alt="Bonan NFT"
+                        layout="fill"
+                        objectFit="cover"
+                      />
+                    </div>
                   </div>
                 </Parallax>
               </div>
@@ -121,9 +129,8 @@ const About = () => {
                     the bonan collection.
                   </div>
                   <div className="section-content">
-                    The Bonan Collection contains different variations of
-                    Bonan, each which have their own unique personality and
-                    swagger.
+                    The Bonan Collection contains different variations of Bonan,
+                    each which have their own unique personality and swagger.
                     <br />
                     <br />
                     The story of Bonan was conceptualized and written by the
@@ -142,14 +149,17 @@ const About = () => {
                 </div>
                 <Parallax speed={width > 768 ? 5 : 0}>
                   <div className="shadow-2xl">
-                  <div data-aos="fade-left" className="w-[300px] h-[300px] framed">
-                    <Image
-                      src="/about/about-new-3.svg"
-                      alt="Bonan NFT"
-                      layout="fill"
-                      objectFit="cover"
-                    />
-                  </div>
+                    <div
+                      data-aos="fade-left"
+                      className="w-[300px] h-[300px] framed"
+                    >
+                      <Image
+                        src="/about/about-new-3.svg"
+                        alt="Bonan NFT"
+                        layout="fill"
+                        objectFit="cover"
+                      />
+                    </div>
                   </div>
                 </Parallax>
               </div>

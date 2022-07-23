@@ -2,8 +2,7 @@ import "../styles/globals.css";
 import "aos/dist/aos.css";
 import AOS from "aos";
 import { useEffect } from "react";
-import { ParallaxProvider } from 'react-scroll-parallax';
-
+import { ParallaxProvider } from "react-scroll-parallax";
 
 function App({ Component, pageProps }) {
   useEffect(() => {

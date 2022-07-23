@@ -49,7 +49,7 @@ section {
 }
 
 .section-content {
-  @apply text-lg
+  @apply text-lg;
 }
 
 .section-description {
@@ -93,5 +93,5 @@ section {
 
 /* Picture Frame */
 .framed {
-  box-shadow: -50px -50px 0 -40px #FFBA52, 50px 50px 0 -40px #FFBA52;
+  box-shadow: -50px -50px 0 -40px #ffba52, 50px 50px 0 -40px #ffba52;
 }
