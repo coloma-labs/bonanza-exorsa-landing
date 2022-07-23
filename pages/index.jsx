@@ -11,6 +11,7 @@ import { RiInstagramFill } from "react-icons/ri";
 import { useWindowSize } from "../hooks/window";
 import Layout from "../components/layout";
 import SocialIconBtn from "../components/buttons/social-icon-btn";
+import NavBtn from "../components/buttons/nav-btn";
 
 const Home = () => {
   const { width } = useWindowSize();

@@ -53,7 +53,7 @@ module.exports = {
         "fade-in": "fade-in 2s ease",
         "fade-in-fast": "fade-in 1s ease",
         "scale-in": "scale-in 2s ease",
-        "banner-load": "banner-load 3s ease",
+        "banner-load": "banner-load 2s ease",
       },
       colors: {
         themeBg: "#1d2125",
