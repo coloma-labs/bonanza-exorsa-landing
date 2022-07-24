@@ -74,6 +74,7 @@ const Manga = () => {
               -divided into physical pages which have a front and back
 
               TODO: Front cover with logo and book opening animation on page load
+              TODO: Book size responsiveness
               TODO: Change from page flip buttons to clicking anywhere on the
                     page will flip in that direction
          */}
