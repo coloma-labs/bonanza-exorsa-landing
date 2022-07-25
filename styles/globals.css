@@ -95,3 +95,95 @@ section {
 .framed {
   box-shadow: -50px -50px 0 -40px #ffba52, 50px 50px 0 -40px #ffba52;
 }
+
+/* Flip book */
+.book {
+  @apply flex items-center justify-center;
+}
+.book input {
+  display: none;
+}
+.book img {
+  width: 100%;
+  height: 100%;
+}
+.book #cover {
+  width: 490px;
+  height: 700px;
+  @apply bg-themeLightOrange;
+}
+.book .flip-book {
+  width: 490px;
+  height: 700px;
+  position: relative;
+  perspective: 1500px;
+}
+.book .flip {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: left;
+  transform-style: preserve-3d;
+  transform: rotateY(0deg);
+  transition: 1s;
+  color: #000;
+}
+.book .front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  box-shadow: inset 20px 0 50px rgba(0, 0, 0, 0.5) 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+.book .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  @apply bg-themeLightOrange;
+}
+.book .flip-btn {
+  position: absolute;
+  bottom: 13px;
+  right: 13px;
+  cursor: pointer;
+  @apply text-themeLightOrange;
+  @apply bg-[rgba(100,100,100,0.7)];
+  @apply px-3;
+  @apply py-1;
+  @apply rounded;
+  @apply hover:scale-110;
+  @apply transition;
+  @apply duration-200;
+  @apply font-bold;
+}
+
+.book #p1 {
+  z-index: 3;
+}
+.book #p2 {
+  z-index: 2;
+}
+.book #p3 {
+  z-index: 1;
+}
+.book #c1:checked ~ .flip-book #p1 {
+  transform: rotateY(-180deg);
+  z-index: 1;
+}
+.book #c2:checked ~ .flip-book #p2 {
+  transform: rotateY(-180deg);
+  z-index: 2;
+}
+.book #c3:checked ~ .flip-book #p3 {
+  transform: rotateY(-180deg);
+  z-index: 3;
+}
