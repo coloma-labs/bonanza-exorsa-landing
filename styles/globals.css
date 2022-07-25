@@ -156,6 +156,14 @@ section {
 	right: 13px;
 	cursor: pointer;
 	@apply text-themeLightOrange;
+	@apply bg-[rgba(100,100,100,0.7)];
+	@apply px-3;
+	@apply py-1;
+	@apply rounded;
+	@apply hover:scale-110;
+	@apply transition;
+	@apply duration-200;
+	@apply font-bold;
 }
 
 .book #p1{
