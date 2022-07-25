@@ -51,14 +51,13 @@ const Manga = () => {
              */}
 
             <div className="book">
-              <input type="checkbox" id="c1"/>
-              <input type="checkbox" id="c2"/>
-              <input type="checkbox" id="c3"/>
+              <input type="checkbox" id="c1" />
+              <input type="checkbox" id="c2" />
+              <input type="checkbox" id="c3" />
 
               <div id="cover" />
 
               <div className="flip-book">
-
                 {/* First physical page */}
 
                 <div className="flip" id="p1">
@@ -69,7 +68,9 @@ const Manga = () => {
                       width="2867"
                       height="4096"
                     />
-                    <label className="flip-btn" for="c1">Next</label>
+                    <label className="flip-btn" for="c1">
+                      Next
+                    </label>
                   </div>
 
                   <div className="back">
@@ -79,9 +80,10 @@ const Manga = () => {
                       width="2867"
                       height="4096"
                     />
-                    <label className="flip-btn" for="c1">Back</label>
+                    <label className="flip-btn" for="c1">
+                      Back
+                    </label>
                   </div>
-
                 </div>
 
                 {/* Second physical page */}
@@ -94,7 +96,9 @@ const Manga = () => {
                       width="2867"
                       height="4096"
                     />
-                    <label className="flip-btn" for="c2">Next</label>
+                    <label className="flip-btn" for="c2">
+                      Next
+                    </label>
                   </div>
                   <div className="back">
                     <Image
@@ -103,7 +107,9 @@ const Manga = () => {
                       width="2867"
                       height="4096"
                     />
-                    <label className="flip-btn" for="c2">Back</label>
+                    <label className="flip-btn" for="c2">
+                      Back
+                    </label>
                   </div>
                 </div>
 
@@ -117,7 +123,9 @@ const Manga = () => {
                       width="2867"
                       height="4096"
                     />
-                    <label className="flip-btn" for="c3">Next</label>
+                    <label className="flip-btn" for="c3">
+                      Next
+                    </label>
                   </div>
                   <div className="back">
                     <Image
@@ -126,7 +134,9 @@ const Manga = () => {
                       width="2867"
                       height="4096"
                     />
-                    <label className="flip-btn" for="c3">Back</label>
+                    <label className="flip-btn" for="c3">
+                      Back
+                    </label>
                   </div>
                 </div>
 
@@ -148,12 +158,13 @@ const Manga = () => {
                       width="2867"
                       height="4096"
                     />
-                    <label className="flip-btn" for="c4">Back</label>
+                    <label className="flip-btn" for="c4">
+                      Back
+                    </label>
                   </div>
                 </div>
 
                 <div id="cover" />
-
               </div>
             </div>
           </>
