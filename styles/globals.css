@@ -26,6 +26,8 @@ body {
 
 #bgVideo {
   object-fit: cover;
+  object-position: 10px top;
+  transform: scale(1.02);
   width: 100vw;
   height: 100vh;
   position: fixed;

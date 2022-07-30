@@ -3,7 +3,7 @@ import Script from "next/script";
 import Head from "next/head";
 import { useState } from "react";
 // Components
-import backgroundVideo from "../public/desktop-bg-min.mp4";
+import backgroundVideo from "../public/widescreen-banner-animation.mp4";
 import Image from "next/image";
 // Externals
 import { FaTwitter, FaDiscord, FaInstagram } from "react-icons/fa";
@@ -45,30 +45,30 @@ const Home = () => {
 
       <Layout>
         <div id="home-page">
-          {/* {width > 900 ? (
+          {width > 900 ? (
             <video className="absolute -z-10" autoPlay muted loop id="bgVideo">
               <source src={backgroundVideo} type="video/mp4" />
             </video>
-          ) : ( */}
-          <div>
-            <Image
-              src="/anime-city.gif"
-              alt="cross the bridge"
-              layout="fill"
-              objectFit="cover"
-              objectPosition="70%"
-            />
-          </div>
-          {/* )} */}
+          ) : (
+            <div>
+              <Image
+                src="/anime-city.gif"
+                alt="cross the bridge"
+                layout="fill"
+                objectFit="cover"
+                objectPosition="70%"
+              />
+            </div>
+          )}
 
           <div className="absolute bottom-0 left-0 h-screen w-full flex flex-col justify-center items-center">
-            <Image
+            {/* <Image
               src="/logos/bonanza-long-cropped.png"
               alt="Bonanza"
               height="57px"
               width="240px"
-            />
-            <div className="flex gap-5 mt-5">
+            /> */}
+            <div className="flex gap-5 lg:mr-10 mt-52 animate-fade-in animation-delay-1000">
               <SocialIconBtn
                 icon={FaDiscord}
                 link="https://discord.gg/Wz4g2Wrmuh"
