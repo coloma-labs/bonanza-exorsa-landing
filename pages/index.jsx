@@ -1,9 +1,10 @@
 // Core
 import Script from "next/script";
 import Head from "next/head";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 // Components
-import backgroundVideo from "../public/widescreen-banner-animation.mp4";
+import introVideo from "../public/widescreen-banner-intro.mp4";
+import loopVideo from "../public/widescreen-banner-loop.mp4";
 import Image from "next/image";
 // Externals
 import { FaTwitter, FaDiscord, FaInstagram } from "react-icons/fa";
@@ -14,7 +15,14 @@ import SocialIconBtn from "../components/buttons/social-icon-btn";
 import NavBtn from "../components/buttons/nav-btn";
 
 const Home = () => {
+  const [vidEnded, setVidEnded] = useState(false)
   const { width } = useWindowSize();
+  const loopVidRef = useRef();
+  
+  // start loop video when intro video ends
+  useEffect(() => {
+    loopVidRef.current?.load();
+  }, [vidEnded])
 
   return (
     <>
@@ -46,9 +54,23 @@ const Home = () => {
       <Layout>
         <div id="home-page">
           {width > 900 ? (
-            <video className="absolute -z-10" autoPlay muted loop id="bgVideo">
-              <source src={backgroundVideo} type="video/mp4" />
+            <>
+
+            <video autoPlay muted id="introVideo"
+              className={vidEnded ? '-z-10' : 'z-10'}
+              onEnded={() => setVidEnded(true)}
+              ref={loopVidRef}
+            >
+              <source src={introVideo} type="video/mp4" />
             </video>
+
+            <video autoPlay loop muted id="loopVideo"
+              className={vidEnded ? 'z-10' : '-z-10'}
+            >
+              <source src={loopVideo} type="video/mp4" />
+            </video>
+
+            </>
           ) : (
             <div>
               <Image
@@ -62,12 +84,16 @@ const Home = () => {
           )}
 
           <div className="absolute bottom-0 left-0 h-screen w-full flex flex-col justify-center items-center">
-            {/* <Image
-              src="/logos/bonanza-long-cropped.png"
-              alt="Bonanza"
-              height="57px"
-              width="240px"
-            /> */}
+            {width < 900 ? (
+              <Image
+                src="/logos/bonanza-long-cropped.png"
+                alt="Bonanza"
+                height="57px"
+                width="240px"
+              />
+            ):(
+                null
+            )}
             <div className="flex gap-5 lg:mr-10 mt-52 animate-fade-in animation-delay-1000">
               <SocialIconBtn
                 icon={FaDiscord}

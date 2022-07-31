@@ -24,7 +24,7 @@ body {
   filter: grayscale(70%);
 }
 
-#bgVideo {
+#loopVideo,#introVideo {
   object-fit: cover;
   object-position: 10px top;
   transform: scale(1.02);
