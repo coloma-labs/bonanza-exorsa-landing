@@ -16,12 +16,12 @@ body {
 }
 
 #about-banner {
-  background: url("../public/about.gif") no-repeat center;
+  background: url("../public/cover-gif-remake.jpg") no-repeat top;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  filter: grayscale(70%);
+  /* filter: grayscale(70%); */
 }
 
 #bgVideo {
