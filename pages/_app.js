@@ -22,7 +22,7 @@ function App({ Component, pageProps }) {
 
     {/* Soundcloud Player */}
     <div
-      className='fixed bottom-0 right-0 overflow-hidden animate-fade-in animation-delay-1000 z-10'>
+      className='hidden md:block fixed bottom-0 right-0 overflow-hidden animate-fade-in animation-delay-1000 z-10'>
       <iframe
         width="100%" height="90"
         scrolling="no"
