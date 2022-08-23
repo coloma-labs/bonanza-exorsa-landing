@@ -54,34 +54,6 @@ const Home = () => {
 
       <Layout>
 
-        {/* Soundcloud Player */}
-        <div
-          className='absolute bottom-0 right-0 overflow-hidden animate-fade-in animation-delay-1000 z-10'>
-          <iframe
-            width="100%" height="90"
-            scrolling="no"
-            frameBorder="no"
-            allow="autoplay"
-            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1472715127&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true&muted=1"
-          >
-          </iframe>
-          {/* <div style={{fontSize: "10px", color: "#cccccc",lineBreak: "anywhere",wordBreak: "normal",overflow: "hidden",whiteSpace: "nowrap",textOverflow: "ellipsis",fontFamily: "Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif",fontWeight: "100"}}>
-            <a href="https://soundcloud.com/bonanza-exorsa"
-            title="Bonanza"
-            target="_blank"
-            style={{color: "#cccccc",textDecoration: "none"}}>
-              Bonanza
-            </a>
-              · 
-            <a href="https://soundcloud.com/bonanza-exorsa/sets/bonanza-vol-1"
-            title="Bonanza Vol. 1"
-            target="_blank"
-            style={{color: "#cccccc",textDecoration: "none"}}>
-              Bonanza Vol. 1
-            </a>
-          </div> */}
-        </div>
-
         <div id="home-page">
           {width > 900 ? (
             <>
