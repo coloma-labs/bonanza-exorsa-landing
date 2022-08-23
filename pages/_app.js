@@ -27,7 +27,6 @@ function App({ Component, pageProps }) {
         width="100%" height="90"
         scrolling="no"
         frameBorder="no"
-        allow="autoplay"
         src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1472715127&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true&muted=1"
       >
       </iframe>
