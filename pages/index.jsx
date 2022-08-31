@@ -1,21 +1,12 @@
 // Core
 import Script from "next/script";
 import Head from "next/head";
-import { useState } from "react";
-// Components
-import backgroundVideo from "../public/desktop-bg-min.mp4";
-import Image from "next/image";
 // Externals
 import { FaTwitter, FaDiscord, FaInstagram } from "react-icons/fa";
-import { RiInstagramFill } from "react-icons/ri";
-import { useWindowSize } from "../hooks/window";
 import Layout from "../components/layout";
 import SocialIconBtn from "../components/buttons/social-icon-btn";
-import NavBtn from "../components/buttons/nav-btn";
 
 const Home = () => {
-  const { width } = useWindowSize();
-
   return (
     <>
       <Script
@@ -45,39 +36,32 @@ const Home = () => {
 
       <Layout>
         <div id="home-page">
-          {/* {width > 900 ? (
+          <div className="hidden md:block">
             <video className="absolute -z-10" autoPlay muted loop id="bgVideo">
-              <source src={backgroundVideo} type="video/mp4" />
+              <source src={'/desktop-loop.mp4'} type="video/mp4" />
             </video>
-          ) : ( */}
-          <div>
-            <Image
-              src="/anime-city.gif"
-              alt="cross the bridge"
-              layout="fill"
-              objectFit="cover"
-              objectPosition="70%"
-            />
           </div>
-          {/* )} */}
+
+          <div className="md:hidden">
+            <video className="absolute -z-10" autoPlay muted loop id="bgVideo">
+              <source src={'/mobile-loop.mp4'} type="video/mp4" />
+            </video>
+          </div>
 
           <div className="absolute bottom-0 left-0 h-screen w-full flex flex-col justify-center items-center">
-            <Image
-              src="/logos/bonanza-long-cropped.png"
-              alt="Bonanza"
-              height="57px"
-              width="240px"
-            />
-            <div className="flex gap-5 mt-5">
+            <div className="flex gap-5 mt-36">
               <SocialIconBtn
+                color="text-white"
                 icon={FaDiscord}
                 link="https://discord.gg/Wz4g2Wrmuh"
               />
               <SocialIconBtn
+                color="text-white"
                 icon={FaTwitter}
                 link="https://twitter.com/bonanzaexorsa"
               />
               <SocialIconBtn
+                color="text-white"
                 icon={FaInstagram}
                 link="https://www.instagram.com/bonanzaexorsa/"
               />
