@@ -1,26 +1,12 @@
 // Core
 import Script from "next/script";
 import Head from "next/head";
-import { useState } from "react";
-// Components
-import backgroundVideo from "../public/desktop-bg-min.mp4";
-import Image from "next/image";
 // Externals
 import { FaTwitter, FaDiscord, FaInstagram } from "react-icons/fa";
-import { RiInstagramFill } from "react-icons/ri";
-import { useWindowSize } from "../hooks/window";
 import Layout from "../components/layout";
 import SocialIconBtn from "../components/buttons/social-icon-btn";
-import NavBtn from "../components/buttons/nav-btn";
 
 const Home = () => {
-  const { width } = useWindowSize();
-
-  const determineBg = () => {
-    if(width > 768) return '/desktop-loop.mp4';
-    return '/mobile-loop.mp4'
-  }
-
   return (
     <>
       <Script
@@ -50,9 +36,17 @@ const Home = () => {
 
       <Layout>
         <div id="home-page">
-          <video className="absolute -z-10" autoPlay muted loop id="bgVideo">
-            <source src={determineBg()} type="video/mp4" />
-          </video>
+          <div className="hidden md:block">
+            <video className="absolute -z-10" autoPlay muted loop id="bgVideo">
+              <source src={'/desktop-loop.mp4'} type="video/mp4" />
+            </video>
+          </div>
+
+          <div className="md:hidden">
+            <video className="absolute -z-10" autoPlay muted loop id="bgVideo">
+              <source src={'/mobile-loop.mp4'} type="video/mp4" />
+            </video>
+          </div>
 
           <div className="absolute bottom-0 left-0 h-screen w-full flex flex-col justify-center items-center">
             <div className="flex gap-5 mt-36">
