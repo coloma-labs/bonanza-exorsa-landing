@@ -38,13 +38,13 @@ const Home = () => {
         <div id="home-page">
           <div className="hidden md:block">
             <video className="absolute -z-10" autoPlay muted loop id="bgVideo">
-              <source src={'/desktop-loop.mp4'} type="video/mp4" />
+              <source src={"/desktop-loop.mp4"} type="video/mp4" />
             </video>
           </div>
 
           <div className="md:hidden">
             <video className="absolute -z-10" autoPlay muted loop id="bgVideo">
-              <source src={'/mobile-loop.mp4'} type="video/mp4" />
+              <source src={"/mobile-loop.mp4"} type="video/mp4" />
             </video>
           </div>
 

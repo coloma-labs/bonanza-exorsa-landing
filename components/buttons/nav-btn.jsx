@@ -5,9 +5,9 @@ function NavBtn({ text, link, newTab }) {
   const router = useRouter();
 
   const determineTextColor = () => {
-    if(router.pathname === '/') return 'text-white';
-    return 'text-themePurple';
-  }
+    if (router.pathname === "/") return "text-white";
+    return "text-themePurple";
+  };
 
   if (link) {
     return (
