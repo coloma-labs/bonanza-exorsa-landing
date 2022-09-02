@@ -30,7 +30,7 @@ export default function Navbar() {
           </div>
 
           <div className={`flex items-center pb-2 md:pb-0`}>
-            {width > 800 ? (
+            {width > 768 ? (
               <div className="flex gap-5 xl:gap-8">
                 <NavBtn text="About" link="/about" />
                 <NavBtn text="Store" />
