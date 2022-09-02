@@ -59,18 +59,7 @@ const Home = () => {
           )}
 
           <div className="absolute bottom-0 left-0 h-screen w-full flex flex-col justify-center items-center">
-            {/* bonanza logo */}
-            {/* {width < 900 ? (
-              <Image
-                src="/logos/bonanza-long-cropped.png"
-                alt="Bonanza"
-                height="57px"
-                width="240px"
-              />
-            ):(
-                null
-            )} */}
-            <div className="flex gap-5 md:mr-10 mt-48 md:mt-52 animate-fade-in animation-delay-1000">
+            <div className="flex gap-5 md:mr-10 mt-48 md:mt-52 animate-fade-in">
               <SocialIconBtn
                 color="text-white"
                 icon={FaDiscord}
