@@ -73,7 +73,7 @@ export default function Navbar() {
                       ></div>
                     </div>
                   </div>
-                
+
                   {isOpen && (
                     <div className="animate-fade-in-fast absolute right-[20px] z-100">
                       <div className="mt-3 bg-themePurple text-white min-w-[100px] text-right py-3 px-5">
@@ -102,7 +102,6 @@ export default function Navbar() {
                       </div>
                     </div>
                   )}
-                  
                 </button>
               </div>
             )}

@@ -42,13 +42,12 @@ const Home = () => {
       </Head>
 
       <Layout>
-
         <div id="home-page">
           {width > 768 ? (
             <>
-            <video autoPlay muted id="bgVideo">
-              <source src={bgVideo} type="video/mp4" />
-            </video>
+              <video autoPlay muted id="bgVideo">
+                <source src={bgVideo} type="video/mp4" />
+              </video>
             </>
           ) : (
             <Image
