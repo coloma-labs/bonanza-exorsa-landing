@@ -9,8 +9,8 @@ function Footer() {
   const router = useRouter();
   if (router.pathname !== "/")
     return (
-      <div className="w-full bg-slate-300 py-5 lg:py-10">
-        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 z-[10]">
+      <div className="w-full bg-slate-300 py-5 lg:py-12">
+        <div className="max-w-[1440px] mx-auto px-4 lg:px-6 z-[10]">
           <div className="footer">
             <div className="content md:px-20">
               <div className="md:flex">

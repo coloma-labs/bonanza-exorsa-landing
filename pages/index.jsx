@@ -1,12 +1,19 @@
 // Core
 import Script from "next/script";
 import Head from "next/head";
+import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
+import { useWindowSize } from "../hooks/window";
+// Components
+import bgVideo from "../public/widescreen-banner-animation.mp4";
+import mobileVideo from "../public/portrait-banner-animation.gif";
 // Externals
 import { FaTwitter, FaDiscord, FaInstagram } from "react-icons/fa";
 import Layout from "../components/layout";
 import SocialIconBtn from "../components/buttons/social-icon-btn";
 
 const Home = () => {
+  const width = useWindowSize().width;
   return (
     <>
       <Script
@@ -35,21 +42,36 @@ const Home = () => {
       </Head>
 
       <Layout>
-        <div id="home-page">
-          <div className="hidden md:block">
-            <video className="absolute -z-10" autoPlay muted loop id="bgVideo">
-              <source src={"/desktop-loop.mp4"} type="video/mp4" />
-            </video>
-          </div>
 
-          <div className="md:hidden">
-            <video className="absolute -z-10" autoPlay muted loop id="bgVideo">
-              <source src={"/mobile-loop.mp4"} type="video/mp4" />
+        <div id="home-page">
+          {width > 768 ? (
+            <>
+            <video autoPlay muted id="bgVideo">
+              <source src={bgVideo} type="video/mp4" />
             </video>
-          </div>
+            </>
+          ) : (
+            <Image
+              src={mobileVideo}
+              alt="cross the bridge"
+              layout="fill"
+              objectFit="cover"
+            />
+          )}
 
           <div className="absolute bottom-0 left-0 h-screen w-full flex flex-col justify-center items-center">
-            <div className="flex gap-5 mt-36">
+            {/* bonanza logo */}
+            {/* {width < 900 ? (
+              <Image
+                src="/logos/bonanza-long-cropped.png"
+                alt="Bonanza"
+                height="57px"
+                width="240px"
+              />
+            ):(
+                null
+            )} */}
+            <div className="flex gap-5 md:mr-10 mt-48 md:mt-52 animate-fade-in animation-delay-1000">
               <SocialIconBtn
                 color="text-white"
                 icon={FaDiscord}

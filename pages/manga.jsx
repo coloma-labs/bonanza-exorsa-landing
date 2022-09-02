@@ -5,7 +5,7 @@ import Layout from "../components/layout";
 import { useWindowSize } from "../hooks/window";
 
 const Manga = () => {
-  const mobile = useWindowSize().width < 768;
+  const mobile = useWindowSize().width < 900;
   return (
     <>
       <Head>
