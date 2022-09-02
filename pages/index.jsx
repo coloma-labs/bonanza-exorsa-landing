@@ -3,6 +3,7 @@ import Script from "next/script";
 import Head from "next/head";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+import { useWindowSize } from "../hooks/window";
 // Components
 import bgVideo from "../public/widescreen-banner-animation.mp4";
 import mobileVideo from "../public/portrait-banner-animation.gif";
@@ -12,6 +13,7 @@ import Layout from "../components/layout";
 import SocialIconBtn from "../components/buttons/social-icon-btn";
 
 const Home = () => {
+  const width = useWindowSize().width;
   return (
     <>
       <Script
