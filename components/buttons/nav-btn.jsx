@@ -15,7 +15,7 @@ function NavBtn({ text, link, newTab }) {
         <div
           className={`${determineTextColor()} cursor-pointer hover:scale-[1.1] duration-200`}
         >
-          <span className="text-2xl">{text}</span>
+          <span className="link link-underline link-underline-black text-2xl">{text}</span>
         </div>
       </Link>
     );
@@ -26,7 +26,7 @@ function NavBtn({ text, link, newTab }) {
         <div
           className={`${determineTextColor()} cursor-pointer hover:scale-[1.1] duration-200`}
         >
-          <span className="text-2xl">{text}</span>
+          <span className="link link-underline link-underline-black text-2xl">{text}</span>
         </div>
       </a>
     );

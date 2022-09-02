@@ -62,6 +62,7 @@ module.exports = {
         themeDarkOrange: "#b83804",
         themeLightOrange: "#FFBA52",
         themePurple: "#5c5f82",
+        themeOrangeBeam: "#faeaac"
       },
       zIndex: {
         100: "100",
