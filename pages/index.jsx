@@ -8,15 +8,10 @@ import bgVideo from "../public/widescreen-banner-animation.mp4";
 import mobileVideo from "../public/portrait-banner-animation.gif";
 // Externals
 import { FaTwitter, FaDiscord, FaInstagram } from "react-icons/fa";
-import { RiInstagramFill } from "react-icons/ri";
-import { useWindowSize } from "../hooks/window";
 import Layout from "../components/layout";
 import SocialIconBtn from "../components/buttons/social-icon-btn";
-import NavBtn from "../components/buttons/nav-btn";
 
 const Home = () => {
-  const { width } = useWindowSize();
-
   return (
     <>
       <Script
@@ -76,14 +71,17 @@ const Home = () => {
             )} */}
             <div className="flex gap-5 md:mr-10 mt-48 md:mt-52 animate-fade-in animation-delay-1000">
               <SocialIconBtn
+                color="text-white"
                 icon={FaDiscord}
                 link="https://discord.gg/Wz4g2Wrmuh"
               />
               <SocialIconBtn
+                color="text-white"
                 icon={FaTwitter}
                 link="https://twitter.com/bonanzaexorsa"
               />
               <SocialIconBtn
+                color="text-white"
                 icon={FaInstagram}
                 link="https://www.instagram.com/bonanzaexorsa/"
               />

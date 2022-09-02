@@ -4,11 +4,16 @@ import { useRouter } from "next/router";
 function NavBtn({ text, link, newTab }) {
   const router = useRouter();
 
+  const determineTextColor = () => {
+    if (router.pathname === "/") return "text-white";
+    return "text-themePurple";
+  };
+
   if (link) {
     return (
       <Link href={link || "/#"}>
         <div
-          className={`text-themePurple cursor-pointer hover:scale-[1.1] duration-200`}
+          className={`${determineTextColor()} cursor-pointer hover:scale-[1.1] duration-200`}
         >
           <span className="text-2xl">{text}</span>
         </div>
@@ -19,7 +24,7 @@ function NavBtn({ text, link, newTab }) {
     return (
       <a href={link || "/#"} target="_blank">
         <div
-          className={`text-themePurple cursor-pointer hover:scale-[1.1] duration-200`}
+          className={`${determineTextColor()} cursor-pointer hover:scale-[1.1] duration-200`}
         >
           <span className="text-2xl">{text}</span>
         </div>
