@@ -11,8 +11,8 @@ function SocialIconBtn(props) {
       break;
     case "instagram":
       PropIcon = FaInstagram;
-      break;    
-  
+      break;
+
     default:
       break;
   }
