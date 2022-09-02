@@ -39,9 +39,9 @@ module.exports = {
           "100%": { transform: "scale(1)" },
         },
         "banner-load": {
-          "0%": { height: "65vh", filter: "grayscale(0%)" },
-          "50%": { height: "65vh", filter: "grayscale(0%)" },
-          "100%": { height: "20vh", filter: "grayscale(60%)" },
+          "0%": { height: "65vh", filter: "grayscale(100%)" },
+          "50%": { height: "65vh", filter: "grayscale(100%)" },
+          "100%": { height: "20vh", filter: "grayscale(0%)" },
         },
       },
       animation: {

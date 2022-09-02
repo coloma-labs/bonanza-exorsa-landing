@@ -48,7 +48,7 @@ const About = () => {
           id="about-banner"
           className="min-h-[120px] md:min-h-[150px] lg:min-h-[180px] animate-banner-load px-5 flex items-center mb-5 md:mb-10"
         >
-          <h1 className="text-6xl md:text-7xl lg:text-8xl text-white animate-fade-in">
+          <h1 className="text-6xl md:text-7xl lg:text-8xl text-[#5c5f82] animate-fade-in">
             About
           </h1>
         </div>
