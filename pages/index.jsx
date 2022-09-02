@@ -4,8 +4,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 // Components
-import introVideo from "../public/widescreen-banner-intro.mp4";
-import loopVideo from "../public/widescreen-banner-loop.mp4";
+import bgVideo from "../public/widescreen-banner-animation.mp4";
 import mobileVideo from "../public/portrait-banner-animation.gif";
 // Externals
 import { FaTwitter, FaDiscord, FaInstagram } from "react-icons/fa";
@@ -16,15 +15,7 @@ import SocialIconBtn from "../components/buttons/social-icon-btn";
 import NavBtn from "../components/buttons/nav-btn";
 
 const Home = () => {
-  const [vidEnded, setVidEnded] = useState(false)
   const { width } = useWindowSize();
-  const loopVidRef = useRef();
-  var playerLoaded = false;
-  
-  // start loop video when intro video ends
-  useEffect(() => {
-    loopVidRef.current?.load();
-  }, [vidEnded])
 
   return (
     <>
@@ -56,23 +47,11 @@ const Home = () => {
       <Layout>
 
         <div id="home-page">
-          {width > 900 ? (
+          {width > 768 ? (
             <>
-
-            <video autoPlay muted id="introVideo"
-              className={vidEnded ? '-z-10' : '-z-[1]'}
-              onEnded={() => setVidEnded(true)}
-              ref={loopVidRef}
-            >
-              <source src={introVideo} type="video/mp4" />
+            <video autoPlay muted id="bgVideo">
+              <source src={bgVideo} type="video/mp4" />
             </video>
-
-            <video autoPlay loop muted id="loopVideo"
-              className={vidEnded ? '-z-[1]' : '-z-10'}
-            >
-              <source src={loopVideo} type="video/mp4" />
-            </video>
-
             </>
           ) : (
             <Image
@@ -95,7 +74,7 @@ const Home = () => {
             ):(
                 null
             )} */}
-            <div className="flex gap-5 lg:mr-10 mt-48 lg:mt-52 animate-fade-in animation-delay-1000">
+            <div className="flex gap-5 md:mr-10 mt-48 md:mt-52 animate-fade-in animation-delay-1000">
               <SocialIconBtn
                 icon={FaDiscord}
                 link="https://discord.gg/Wz4g2Wrmuh"
