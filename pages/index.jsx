@@ -1,11 +1,12 @@
 // Core
 import Script from "next/script";
 import Head from "next/head";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 // Components
 import introVideo from "../public/widescreen-banner-intro.mp4";
 import loopVideo from "../public/widescreen-banner-loop.mp4";
-import Image from "next/image";
+import mobileVideo from "../public/portrait-banner-animation.gif";
 // Externals
 import { FaTwitter, FaDiscord, FaInstagram } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
@@ -74,19 +75,17 @@ const Home = () => {
 
             </>
           ) : (
-            <div>
-              <Image
-                src="/anime-city.gif"
-                alt="cross the bridge"
-                layout="fill"
-                objectFit="cover"
-                objectPosition="70%"
-              />
-            </div>
+            <Image
+              src={mobileVideo}
+              alt="cross the bridge"
+              layout="fill"
+              objectFit="cover"
+            />
           )}
 
           <div className="absolute bottom-0 left-0 h-screen w-full flex flex-col justify-center items-center">
-            {width < 900 ? (
+            {/* bonanza logo */}
+            {/* {width < 900 ? (
               <Image
                 src="/logos/bonanza-long-cropped.png"
                 alt="Bonanza"
@@ -95,8 +94,8 @@ const Home = () => {
               />
             ):(
                 null
-            )}
-            <div className="flex gap-5 lg:mr-10 mt-52 animate-fade-in animation-delay-1000">
+            )} */}
+            <div className="flex gap-5 lg:mr-10 mt-48 lg:mt-52 animate-fade-in animation-delay-1000">
               <SocialIconBtn
                 icon={FaDiscord}
                 link="https://discord.gg/Wz4g2Wrmuh"
