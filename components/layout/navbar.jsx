@@ -73,35 +73,37 @@ export default function Navbar() {
                       ></div>
                     </div>
                   </div>
-                </button>
-                {isOpen && (
-                  <div className="animate-fade-in-fast absolute right-[20px] z-100">
-                    <div className="mt-3 bg-themePurple text-white min-w-[100px] text-right py-3 px-5">
-                      <ul className="text-xl cursor-pointer">
-                        <Link href="/about">
-                          <li className="py-1 transition duration-200 hover:text-themeLightOrange">
-                            About
-                          </li>
-                        </Link>
-                        <li className="py-1 opacity-[0.6]">Store</li>
-                        <Link href="/manga">
-                          <li className="py-1 transition duration-200 hover:text-themeLightOrange">
-                            Manga
-                          </li>
-                        </Link>
-                        <li className="py-1 opacity-[0.6]">Stories</li>
-                        <a
-                          href="https://bonanzaexorsa.gitbook.io/bonanza-whitepaper/"
-                          target="_blank"
-                        >
-                          <li className="py-1 transition duration-200 hover:text-themeLightOrange">
-                            Docs
-                          </li>
-                        </a>
-                      </ul>
+                
+                  {isOpen && (
+                    <div className="animate-fade-in-fast absolute right-[20px] z-100">
+                      <div className="mt-3 bg-themePurple text-white min-w-[100px] text-right py-3 px-5">
+                        <ul className="text-xl cursor-pointer">
+                          <Link href="/about">
+                            <li className="py-1 transition duration-200 hover:text-themeLightOrange">
+                              About
+                            </li>
+                          </Link>
+                          <li className="py-1 opacity-[0.6]">Store</li>
+                          <Link href="/manga">
+                            <li className="py-1 transition duration-200 hover:text-themeLightOrange">
+                              Manga
+                            </li>
+                          </Link>
+                          <li className="py-1 opacity-[0.6]">Stories</li>
+                          <a
+                            href="https://bonanzaexorsa.gitbook.io/bonanza-whitepaper/"
+                            target="_blank"
+                          >
+                            <li className="py-1 transition duration-200 hover:text-themeLightOrange">
+                              Docs
+                            </li>
+                          </a>
+                        </ul>
+                      </div>
                     </div>
-                  </div>
-                )}
+                  )}
+                  
+                </button>
               </div>
             )}
             <div></div>
