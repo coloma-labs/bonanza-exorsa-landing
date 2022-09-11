@@ -44,7 +44,7 @@ const Home = () => {
         <div id="home-page">
           {width > 768 ? (
             <>
-              <video autoPlay muted id="bgVideo">
+              <video autoPlay muted loop id="bgVideo">
                 <source src={bgVideo} type="video/mp4" />
               </video>
             </>
