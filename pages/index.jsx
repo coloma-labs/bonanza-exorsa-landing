@@ -2,7 +2,6 @@
 import Script from "next/script";
 import Head from "next/head";
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
 import { useWindowSize } from "../hooks/window";
 // Components
 import bgVideo from "../public/widescreen-banner-animation.mp4";
