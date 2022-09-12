@@ -7,6 +7,7 @@ import { useWindowSize } from "../hooks/window";
 import bgVideo from "../public/widescreen-banner-animation.mp4";
 import mobileVideo from "../public/portrait-banner-animation.gif";
 // Externals
+import { FaTwitter, FaDiscord, FaInstagram } from "react-icons/fa";
 import Layout from "../components/layout";
 import SocialIconBtn from "../components/buttons/social-icon-btn";
 
@@ -43,7 +44,7 @@ const Home = () => {
         <div id="home-page">
           {width > 768 ? (
             <>
-              <video autoPlay muted id="bgVideo">
+              <video autoPlay muted loop id="bgVideo">
                 <source src={bgVideo} type="video/mp4" />
               </video>
             </>
@@ -57,20 +58,20 @@ const Home = () => {
           )}
 
           <div className="absolute bottom-0 left-0 h-screen w-full flex flex-col justify-center items-center">
-            <div className="flex gap-5 md:mr-14 mt-48 md:mt-52 animate-fade-in">
+            <div className="flex gap-5 md:mr-10 mt-48 md:mt-52 animate-fade-in">
               <SocialIconBtn
                 color="text-white"
-                icon="discord"
+                icon={FaDiscord}
                 link="https://discord.gg/Wz4g2Wrmuh"
               />
               <SocialIconBtn
                 color="text-white"
-                icon="twitter"
+                icon={FaTwitter}
                 link="https://twitter.com/bonanzaexorsa"
               />
               <SocialIconBtn
                 color="text-white"
-                icon="instagram"
+                icon={FaInstagram}
                 link="https://www.instagram.com/bonanzaexorsa/"
               />
             </div>
