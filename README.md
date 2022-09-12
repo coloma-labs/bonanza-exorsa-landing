@@ -1,3 +1,1 @@
 # Bonanza Exorsa NFT
-
-
