@@ -10,6 +10,7 @@ import mobileVideo from "../public/portrait-banner-animation.gif";
 import { FaTwitter, FaDiscord, FaInstagram } from "react-icons/fa";
 import Layout from "../components/layout";
 import SocialIconBtn from "../components/buttons/social-icon-btn";
+import { SITE_CONFIG } from "../utils/site-config";
 
 const Home = () => {
   const width = useWindowSize().width;
@@ -32,7 +33,8 @@ const Home = () => {
       </Script>
 
       <Head>
-        <title>Bonanza Exorsa - A Metaphysical Brand</title>
+        <title>{SITE_CONFIG.title}</title>
+        <meta name="description" content={SITE_CONFIG.desc} />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta
           name="keywords"
@@ -67,12 +69,12 @@ const Home = () => {
               <SocialIconBtn
                 color="text-white"
                 icon={FaTwitter}
-                link="https://twitter.com/bonanzaexorsa"
+                link={`https://twitter.com/${SITE_CONFIG.twitter}`}
               />
               <SocialIconBtn
                 color="text-white"
                 icon={FaInstagram}
-                link="https://www.instagram.com/bonanzaexorsa/"
+                link={`https://www.instagram.com/${SITE_CONFIG.instagram}`}
               />
             </div>
           </div>
