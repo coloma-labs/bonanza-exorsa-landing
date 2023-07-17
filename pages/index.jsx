@@ -3,9 +3,6 @@ import Script from "next/script";
 import Head from "next/head";
 import Image from "next/image";
 import { useWindowSize } from "../hooks/window";
-// Components
-import bgVideo from "../public/widescreen-banner-animation.mp4";
-import mobileVideo from "../public/portrait-banner-animation.gif";
 // Externals
 import { FaTwitter, FaDiscord, FaInstagram } from "react-icons/fa";
 import Layout from "../components/layout";
@@ -47,12 +44,15 @@ const Home = () => {
           {width > 768 ? (
             <>
               <video autoPlay muted loop id="bgVideo">
-                <source src={bgVideo} type="video/mp4" />
+                <source
+                  src={"/widescreen-banner-animation.mp4"}
+                  type="video/mp4"
+                />
               </video>
             </>
           ) : (
-            <img
-              src={mobileVideo}
+            <Image
+              src={"/portrait-banner-animation.gif"}
               alt="cross the bridge"
               layout="fill"
               objectFit="cover"

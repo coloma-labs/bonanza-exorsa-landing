@@ -13,7 +13,7 @@ function Manifesto({ isOpen, setIsOpen, isScrolled }) {
             isScrolled ? "opacity-0" : ""
           }`}
         >
-          <img
+          <Image
             src="/book.svg"
             height={width > 900 ? 110 : 90}
             width={width > 900 ? 140 : 100}
@@ -90,7 +90,7 @@ function Manifesto({ isOpen, setIsOpen, isScrolled }) {
           <p style={{ fontStyle: "italic" }}>Would you cross the Bridge?</p>
           <br />
           <div className="h[50px]">
-            <img
+            <Image
               src="/logos/bonanza-official-min.png"
               alt="Bonanza"
               height="32px"

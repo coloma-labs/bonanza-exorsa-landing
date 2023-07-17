@@ -1,2 +1,10 @@
-const withVideos = require("next-videos");
-module.exports = withVideos();
+module.exports = {
+  poweredByHeader: false,
+  trailingSlash: true,
+  reactStrictMode: true,
+  images: {
+    loader: "akamai",
+    path: "",
+    domains: ["i.ibb.co"],
+  },
+};
