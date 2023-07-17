@@ -17,7 +17,7 @@ function Footer() {
                 <div className="w-full md:w-1/3">
                   <div className="flex items-center">
                     <a href="/">
-                      <Image
+                      <img
                         src="/logos/white/bonanza-1.png"
                         alt="Bonanza"
                         height="40px"

@@ -51,7 +51,7 @@ const Home = () => {
               </video>
             </>
           ) : (
-            <Image
+            <img
               src={mobileVideo}
               alt="cross the bridge"
               layout="fill"

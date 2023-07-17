@@ -27,7 +27,7 @@ const Manga = () => {
               <div className="max-w-[800px] min-h-screen">
                 <div className="animate-fade-in shadow-2xl">
                   {["1", "2", "3", "4", "5", "6", "7"].map((el) => (
-                    <Image
+                    <img
                       src={`/manga/BONAN_MANGA_0${el}.svg`}
                       alt={`Manga ${el}`}
                       width="2867"
@@ -62,7 +62,7 @@ const Manga = () => {
 
                 <div className="flip" id="p1">
                   <div className="front">
-                    <Image
+                    <img
                       src={`/manga/BONAN_MANGA_01.svg`}
                       alt={`Manga 1`}
                       width="2867"
@@ -74,7 +74,7 @@ const Manga = () => {
                   </div>
 
                   <div className="back">
-                    <Image
+                    <img
                       src={`/manga/BONAN_MANGA_02.svg`}
                       alt={`Manga 2`}
                       width="2867"
@@ -90,7 +90,7 @@ const Manga = () => {
 
                 <div className="flip" id="p2">
                   <div className="front">
-                    <Image
+                    <img
                       src={`/manga/BONAN_MANGA_03.svg`}
                       alt={`Manga 3`}
                       width="2867"
@@ -101,7 +101,7 @@ const Manga = () => {
                     </label>
                   </div>
                   <div className="back">
-                    <Image
+                    <img
                       src={`/manga/BONAN_MANGA_04.svg`}
                       alt={`Manga 4`}
                       width="2867"
@@ -117,7 +117,7 @@ const Manga = () => {
 
                 <div className="flip" id="p3">
                   <div className="front">
-                    <Image
+                    <img
                       src={`/manga/BONAN_MANGA_05.svg`}
                       alt={`Manga 5`}
                       width="2867"
@@ -128,7 +128,7 @@ const Manga = () => {
                     </label>
                   </div>
                   <div className="back">
-                    <Image
+                    <img
                       src={`/manga/BONAN_MANGA_06.svg`}
                       alt={`Manga 6`}
                       width="2867"
@@ -144,7 +144,7 @@ const Manga = () => {
 
                 <div className="flip" id="p4">
                   <div className="front">
-                    <Image
+                    <img
                       src={`/manga/BONAN_MANGA_07.svg`}
                       alt={`Manga 7`}
                       width="2867"
@@ -152,7 +152,7 @@ const Manga = () => {
                     />
                   </div>
                   <div className="back">
-                    <Image
+                    <img
                       src={`/manga/BONAN_MANGA_07.svg`}
                       alt={`Manga 7`}
                       width="2867"

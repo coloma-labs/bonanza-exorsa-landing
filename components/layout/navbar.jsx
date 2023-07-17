@@ -18,7 +18,7 @@ export default function Navbar() {
             {router.pathname !== "/" ? (
               <Link href="/">
                 <div className="cursor-pointer flex items-center">
-                  <Image
+                  <img
                     src="/logos/bonanza-long-cropped.png"
                     alt="Bonanza"
                     height="41px"

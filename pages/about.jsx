@@ -78,7 +78,7 @@ const About = () => {
                       data-aos="fade-left"
                       className="w-[300px] h-[300px] framed"
                     >
-                      <Image
+                      <img
                         src="/about/about-new-1.svg"
                         alt="Bonan NFT"
                         layout="fill"
@@ -112,7 +112,7 @@ const About = () => {
                       data-aos="fade-left"
                       className="w-[300px] h-[300px] framed"
                     >
-                      <Image
+                      <img
                         src="/about/about-new-2.svg"
                         alt="Bonan NFT"
                         layout="fill"
@@ -153,7 +153,7 @@ const About = () => {
                       data-aos="fade-left"
                       className="w-[300px] h-[300px] framed"
                     >
-                      <Image
+                      <img
                         src="/about/about-new-3.svg"
                         alt="Bonan NFT"
                         layout="fill"
