@@ -64,7 +64,7 @@ const Home = () => {
               <SocialIconBtn
                 color="text-white"
                 icon={FaDiscord}
-                link="https://discord.gg/Wz4g2Wrmuh"
+                link={SITE_CONFIG.discord}
               />
               <SocialIconBtn
                 color="text-white"
